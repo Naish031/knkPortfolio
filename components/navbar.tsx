@@ -42,15 +42,6 @@ export function NavBar() {
             side="left"
             className="mt-1 bg-[#0B9443] max-h-[400px] max-w-[300px] rounded-3xl border-none"
           >
-            {/* <SheetHeader> 
-               <SheetTitle className="text-white">
-                KnkTek Construction.
-              </SheetTitle> 
-               <SheetDescription className="text-white">
-                Scale and launch products with expert developers, on-demand, at
-                a flat monthly fee
-              </SheetDescription> 
-             </SheetHeader> */}
             <div className="flex flex-col space-y-3 mt-[4.5rem] z-[99] hover:!bg-[#0B9443]/90">
               <DialogClose asChild>
                 <Link href="/" className="">
@@ -111,25 +102,27 @@ export function NavBar() {
           <Link href="/">
             <Button variant="ghost" className="px-0.5">
               <Image
-                src={"/assets/logos/K&ZLogo.png"}
+                src={"/assets/logos/kzLogo.png"}
                 alt="logo"
+                priority
                 width={45}
                 height={29}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-">KZA</span>
+              <span className="ml-1">KZA</span>
             </Button>
           </Link>
           <Link href="/">
             <Button variant="ghost" className="px-0.5">
               <Image
-                src={"/assets/logos/KnkLogo.png"}
+                src={"/assets/logos/knkLogo.png"}
                 alt="logo"
+                priority
                 width={45}
                 height={29}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-">KNK</span>
+              <span className="ml-1">KNK</span>
             </Button>
           </Link>
           <div className="max-[825px]:hidden">
