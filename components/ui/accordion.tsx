@@ -16,12 +16,12 @@ export default function AccordionComponent() {
         >
           <Accordion.Trigger className="w-full font-bold">
             <div className="w-full flex items-center justify-between my-2 ">
-              <Balancer className="text-xl  text-left text-black dark:text-white">
+              <Balancer className="text-xl text-left text-black dark:text-white">
                 {item.title}
               </Balancer>
-              <div className="bg-[#E6E6E6] p-2 rounded-lg cursor-pointer hover:dark:bg-[#0B9443] ">
+              <div className="bg-[#E6E6E6] p-2 rounded-lg cursor-pointer">
                 <Plus
-                  className="transition-transform duration-300 transform data-[state=open]:rotate-45 dark:text-black hover:dark:text-white"
+                  className="transition-transform duration-300 transform data-[state=open]:rotate-45 dark:text-black"
                   aria-hidden
                 />
               </div>

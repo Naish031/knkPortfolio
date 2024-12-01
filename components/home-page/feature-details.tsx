@@ -1,8 +1,6 @@
 import { companyProjectsInfo } from "@/constants/whyUs";
 import React from "react";
 import { Container, Section } from "../craft";
-import { Button } from "../ui/button";
-import Link from "next/link";
 
 const FeatureDetails = () => {
   return (
@@ -17,20 +15,10 @@ const FeatureDetails = () => {
         }}
       >
         <Container className="!p-0 flex flex-col gap-6 md:gap-16 lg:gap-24 xl:gap-32">
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
-            <h2 className="text-4xl md:text-6xl font-bold text-white">
-              We succeed <br /> with teamwork.
-            </h2>
-            <Link href="#contact">
-              <Button
-                className="w-fit rounded-full font-normal text-lg min-w-[142px] h-[64px] md:min-w-[180px] md:h-[80px]"
-                size={"lg"}
-                variant={"default"}
-              >
-                Contact
-              </Button>
-            </Link>
-          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white">
+            We succeed <br /> with teamwork.
+          </h2>
+
           {/* Overlay Content */}
           <div className="w-full z-30 grid md:grid-cols-2 xl:grid-cols-4 gap-2">
             {companyProjectsInfo.map(({ number, title }, index) => (

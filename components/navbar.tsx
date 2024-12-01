@@ -11,13 +11,7 @@ import {
   //   NavigationMenuList,
 } from "./ui/navigation-menu";
 // import ModeToggle from "../mode-toggle"
-import {
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
+import { SheetContent, SheetTrigger } from "./ui/sheet";
 import ModeToggle from "./mode-toggle";
 import Image from "next/image";
 
@@ -40,54 +34,84 @@ export function NavBar() {
           </SheetTrigger>
           <SheetContent
             side="left"
-            className="mt-1 bg-[#0B9443] max-h-[400px] max-w-[300px] rounded-3xl border-none"
+            className="mt-1 bg-[#0B9443] max-h-[365px] !max-w-[300px] rounded-3xl border-none"
           >
-            <div className="flex flex-col space-y-3 mt-[4.5rem] z-[99] hover:!bg-[#0B9443]/90">
+            <div className="flex flex-col mt-[4.5rem] z-[99]">
               <DialogClose asChild>
-                <Link href="/" className="">
+                <Link
+                  href="/"
+                  className="border-t border-white/50 py-1.5  w-full flex justify-around items-center"
+                >
+                  <span className=" w-1/5 text-base text-white/50 text-center">
+                    01
+                  </span>
                   <Button
                     variant="ghost"
-                    className="w-full border-t border-white/50 rounded-none text-white"
+                    className="w-4/5 rounded-none text-white text-xl !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Home
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="#featured-projects">
+                <Link
+                  href="#featured-projects"
+                  className="w-full border-t border-white/50 py-1.5 flex justify-around items-center"
+                >
+                  <span className=" w-1/5 text-base text-white/50 text-center">
+                    02
+                  </span>
                   <Button
                     variant="ghost"
-                    className="w-full border-t border-white/50 rounded-none text-white"
+                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Featured Projects
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="#ourServices">
+                <Link
+                  href="#ourServices"
+                  className="border-t border-white/50 py-1.5 w-full flex justify-around items-center"
+                >
+                  <span className=" w-1/5 text-base text-white/50 text-center">
+                    03
+                  </span>
                   <Button
                     variant="ghost"
-                    className="w-full border-t border-white/50 rounded-none text-white"
+                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Our Services
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="#chooseUs">
+                <Link
+                  href="#chooseUs"
+                  className="border-t border-white/50 py-1.5 w-full flex justify-around items-center"
+                >
+                  <span className=" w-1/5 text-base text-white/50 text-center">
+                    04
+                  </span>
                   <Button
                     variant="ghost"
-                    className="w-full border-t border-white/50 rounded-none text-white"
+                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Why Us?
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="#contact">
+                <Link
+                  href="#contact"
+                  className="border-t border-b border-white/50 py-1.5  w-full flex justify-around items-center"
+                >
+                  <span className=" w-1/5 text-base text-white/50 text-center">
+                    05
+                  </span>
                   <Button
                     variant="ghost"
-                    className="w-full border-t border-b border-white/50 rounded-none text-white"
+                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Contact Us
                   </Button>

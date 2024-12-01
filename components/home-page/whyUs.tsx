@@ -1,16 +1,7 @@
 // Layout
 import { Section, Container } from "@/components/craft";
-import Balancer from "react-wrap-balancer";
-import Link from "next/link";
 
-// Icons
-import { Coins, ArrowRight } from "lucide-react";
-
-import {
-  featureSet,
-  companyDetails,
-  companyProjectsInfo,
-} from "@/constants/whyUs";
+import { featureSet, companyDetails } from "@/constants/whyUs";
 
 import Image from "next/image";
 
@@ -34,7 +25,6 @@ const featureText: FeatureText[] = [
       />
     ),
     title: featureSet[0].title,
-    href: "/",
     description: featureSet[0].description,
     cta: "Learn More",
   },
@@ -54,21 +44,12 @@ const featureText: FeatureText[] = [
     cta: "Learn More",
   },
 ];
-
-const singleFeatureText: FeatureText[] = [
-  {
-    icon: <Coins className="h-6 w-6" />,
-    title: "Lorem Ipsum",
-    href: "/",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    cta: "Learn More",
-  },
-];
-
 const WhyUs = () => {
   return (
-    <Section className="not-prose flex flex-col gap-6 h-full !pb-0" id="chooseUs">
+    <Section
+      className="not-prose flex flex-col gap-6 h-full !pb-0"
+      id="chooseUs"
+    >
       <Container className="!pb-0">
         <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-3">
           {/* Image Div also grid column 1 */}
@@ -102,9 +83,8 @@ const WhyUs = () => {
               </div>
               <div className="mt-3 grid gap-6 md:mt-6 md:grid-cols-2 rounded-2xl">
                 {featureText.map(
-                  ({ icon, title, description, href }, index) => (
-                    <Link
-                      href={`${href}`}
+                  ({ icon, title, description }, index) => (
+                    <div
                       className="flex flex-col bg-opacity-5 bg-black justify-between gap-6 rounded-3xl border p-6 transition-all hover:-mt-2 hover:mb-2"
                       key={index}
                     >
@@ -117,7 +97,7 @@ const WhyUs = () => {
                           {description}
                         </p>
                       </div>
-                    </Link>
+                    </div>
                   )
                 )}
               </div>
