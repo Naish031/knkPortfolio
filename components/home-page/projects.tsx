@@ -63,20 +63,63 @@ const FeaturedProjects = () => {
                 key={project.title}
                 className="not-prose flex flex-col items-center justify-center gap-1 overflow-hidden relative"
               >
-                <div className="w-full relative md:w-full h-auto aspect-[8/6]">
+                <div className="w-full group overflow-hidden relative md:w-full h-auto aspect-[8/6] rounded-[30px]">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
                     width={350}
                     height={350}
-                    className="object-cover absolute inset-0 h-full w-full"
-                    style={{
-                      borderRadius: "30px",
-                    }}
+                    className="object-cover absolute inset-0 h-full w-full rounded-[30px]"
                   />
+                  {/* Hover effect details */}
+                  <div className="absolute inset-0 bg-black/50 rounded-[30px] flex flex-col items-start justify-end text-white p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out">
+                    <div className="flex items-center">
+                      <Image
+                        src={project.details.contractCost.icon}
+                        alt="Contract Cost"
+                        className="w-4 h-4 mr-2"
+                        width={16}
+                        height={16}
+                      />
+                      <span>{project.details.contractCost.value}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Image
+                        src={project.details.height.icon}
+                        alt="Height"
+                        className="w-4 h-4 mr-2"
+                        width={16}
+                        height={16}
+                      />
+                      <span>{project.details.height.value}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Image
+                        src={project.details.time.icon}
+                        alt="Time"
+                        className="w-4 h-4 mr-2"
+                        width={16}
+                        height={16}
+                      />
+                      <span>{project.details.time.value}</span>
+                    </div>
+                    {/* Display type of work with a single icon */}
+                    <div className="flex items-center">
+                      <Image
+                        src={project.details.typeOfWorkIcon}
+                        alt="Type of Work"
+                        className="w-4 h-4 mr-2"
+                        width={16}
+                        height={16}
+                      />
+                      <span>{project.details.typeOfWork.join(", ")}</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="absolute top-4 left-4 rounded-2xl bg-white py-1 w-28 md:max-w-32">
-                  <p className="text-black text-center text-sm">{project.location}</p>
+                  <p className="text-black text-center text-sm">
+                    {project.location}
+                  </p>
                 </div>
 
                 <h3 className="w-full text-left text-xl md:text-2xl font-medium mt-1">
