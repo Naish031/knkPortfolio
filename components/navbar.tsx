@@ -117,7 +117,9 @@ export function NavBar() {
                   </Button>
                 </Link>
               </DialogClose>
-              {/* <ModeToggle  /> */}
+              <div className="absolute bottom-2 left-3">
+                <ModeToggle />
+              </div>
             </div>
           </SheetContent>
         </Dialog>
