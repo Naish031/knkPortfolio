@@ -35,10 +35,10 @@ const tabs: TabItem[] = [
     value: "commercial",
     label: "Commercial",
   },
-  {
-    value: "residential",
-    label: "Residential",
-  },
+  // {
+  //   value: "residential",
+  //   label: "Residential",
+  // },
   {
     value: "otherProjects",
     label: "Other Projects",
@@ -136,7 +136,7 @@ const featuredProjects: Project[] = [
   },
   {
     title: "Serena Hotel (SOST)",
-    imageUrl: "/assets/images/projects3x/serenaSost.png",
+    imageUrl: "/assets/images/projects3x/sostSerena.png",
     categories: ["allProjects", "commercial"],
     location: "Gilgit & Baltistan, Pk",
     details: {
@@ -222,72 +222,72 @@ const featuredProjects: Project[] = [
       },
     },
   },
-  {
-    title: "Villa in Bahria Garden City - 2 Kanal",
-    imageUrl: "/assets/images/projects3x/2kanal.png",
-    categories: ["allProjects", "residential"],
-    location: "Islamabad, Pk",
-    details: {
-      contractCost: {
-        value: "15000000",
-        icon: "/assets/icons/contract.png",
-      },
-      typeOfWork: ["Residential", "Construction"],
-      typeOfWorkIcon: "/assets/icons/work.png",
-      height: {
-        value: "2 Stories",
-        icon: "/assets/icons/height.png",
-      },
-      time: {
-        value: "8 Months to Build",
-        icon: "/assets/icons/time.png",
-      },
-    },
-  },
-  {
-    title: "Villa in Bahria Garden City - 5 Kanal",
-    imageUrl: "/assets/images/projects3x/5kanal.png",
-    categories: ["allProjects", "residential"],
-    location: "Islamabad, Pk",
-    details: {
-      contractCost: {
-        value: "25000000",
-        icon: "/assets/icons/contract.png",
-      },
-      typeOfWork: ["Residential", "Construction"],
-      typeOfWorkIcon: "/assets/icons/work.png",
-      height: {
-        value: "3 Stories",
-        icon: "/assets/icons/height.png",
-      },
-      time: {
-        value: "10 Months to Build",
-        icon: "/assets/icons/time.png",
-      },
-    },
-  },
-  {
-    title: "House in Bahria Phase 8 - 10 Marlas",
-    imageUrl: "/assets/images/projects3x/10marla.png",
-    categories: ["allProjects", "residential"],
-    location: "Islamabad, Pk",
-    details: {
-      contractCost: {
-        value: "12000000",
-        icon: "/assets/icons/contract.png",
-      },
-      typeOfWork: ["Residential", "Construction"],
-      typeOfWorkIcon: "/assets/icons/work.png",
-      height: {
-        value: "1 Story",
-        icon: "/assets/icons/height.png",
-      },
-      time: {
-        value: "6 Months to Build",
-        icon: "/assets/icons/time.png",
-      },
-    },
-  },
+  // {
+  //   title: "Villa in Bahria Garden City - 2 Kanal",
+  //   imageUrl: "/assets/images/projects3x/2kanal.png",
+  //   categories: ["allProjects", "residential"],
+  //   location: "Islamabad, Pk",
+  //   details: {
+  //     contractCost: {
+  //       value: "15000000",
+  //       icon: "/assets/icons/contract.png",
+  //     },
+  //     typeOfWork: ["Residential", "Construction"],
+  //     typeOfWorkIcon: "/assets/icons/work.png",
+  //     height: {
+  //       value: "2 Stories",
+  //       icon: "/assets/icons/height.png",
+  //     },
+  //     time: {
+  //       value: "8 Months to Build",
+  //       icon: "/assets/icons/time.png",
+  //     },
+  //   },
+  // },
+  // {
+  //   title: "Villa in Bahria Garden City - 5 Kanal",
+  //   imageUrl: "/assets/images/projects3x/5kanal.png",
+  //   categories: ["allProjects", "residential"],
+  //   location: "Islamabad, Pk",
+  //   details: {
+  //     contractCost: {
+  //       value: "25000000",
+  //       icon: "/assets/icons/contract.png",
+  //     },
+  //     typeOfWork: ["Residential", "Construction"],
+  //     typeOfWorkIcon: "/assets/icons/work.png",
+  //     height: {
+  //       value: "3 Stories",
+  //       icon: "/assets/icons/height.png",
+  //     },
+  //     time: {
+  //       value: "10 Months to Build",
+  //       icon: "/assets/icons/time.png",
+  //     },
+  //   },
+  // },
+  // {
+  //   title: "House in Bahria Phase 8 - 10 Marlas",
+  //   imageUrl: "/assets/images/projects3x/10marla.png",
+  //   categories: ["allProjects", "residential"],
+  //   location: "Islamabad, Pk",
+  //   details: {
+  //     contractCost: {
+  //       value: "12000000",
+  //       icon: "/assets/icons/contract.png",
+  //     },
+  //     typeOfWork: ["Residential", "Construction"],
+  //     typeOfWorkIcon: "/assets/icons/work.png",
+  //     height: {
+  //       value: "1 Story",
+  //       icon: "/assets/icons/height.png",
+  //     },
+  //     time: {
+  //       value: "6 Months to Build",
+  //       icon: "/assets/icons/time.png",
+  //     },
+  //   },
+  // },
   // More Projects Incoming
 ];
 
