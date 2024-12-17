@@ -27,7 +27,7 @@ const AllProjects = () => {
   return (
     <Section className="border-t border-gray-200" id="all-projects">
       <Container>
-        <Title text="All Projects" className="text-center font-semibold mt-5 mb-10" />
+        <Title text="All Projects" className="text-left ml-2 font-semibold mt-5 mb-10" />
 
         <div className="grid items-stretch gap-4 md:gap-8 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Render filtered projects */}
@@ -91,7 +91,7 @@ const AllProjects = () => {
                   </div>
                 </div>
                 <div className="absolute top-4 left-4 rounded-2xl bg-white py-1 w-28 md:max-w-32">
-                  <p className="text-black text-center text-sm">
+                  <p className="text-black text-center text-xs">
                     {project.location}
                   </p>
                 </div>
