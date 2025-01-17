@@ -20,15 +20,15 @@ export default function RootLayout({
   return (
     <Layout>
       <body className={interTight.className}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          // defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        >
-          <NavBar />
-          {children}
-        </ThemeProvider>
+        > */}
+        <NavBar />
+        {children}
+        {/* </ThemeProvider> */}
       </body>
     </Layout>
   );

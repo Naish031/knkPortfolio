@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         <h3 className="text-muted-foreground lg:max-w-[90%] xl:max-w-[85%] xxl:max-w-[92%] mx-auto">
-          <Balancer className="text-3xl text-black dark:text-white md:text-4xl lg:text-5xl text-left lg:leading-tight">
+          <Balancer className="text-3xl text-black md:text-4xl lg:text-5xl text-left lg:leading-tight">
             {heroData.description}
           </Balancer>
         </h3>

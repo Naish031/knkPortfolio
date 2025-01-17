@@ -74,32 +74,30 @@ const WhyUs = () => {
             <div className="border-4 border-primary p-2.5 rounded-2xl">
               {/* Why US? & Description */}
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl md:text-6xl font-bold">
+                <h2 className="text-5xl md:text-6xl font-bold text-black">
                   {companyDetails.title}
                 </h2>
-                <p className="text-xl md:text-2xl font-normal opacity-70">
+                <p className="text-xl md:text-2xl text-black font-normal opacity-70">
                   {companyDetails.description}
                 </p>
               </div>
               <div className="mt-3 grid gap-6 md:mt-6 md:grid-cols-2 rounded-2xl">
-                {featureText.map(
-                  ({ icon, title, description }, index) => (
-                    <div
-                      className="flex flex-col bg-opacity-5 bg-black justify-between gap-6 rounded-3xl border p-6 transition-all hover:-mt-2 hover:mb-2"
-                      key={index}
-                    >
-                      <div className="grid gap-4">
-                        {icon}
-                        <h4 className="text-lg font-semibold text-primary">
-                          {title}
-                        </h4>
-                        <p className="text-base leading-relaxed font-normal opacity-75">
-                          {description}
-                        </p>
-                      </div>
+                {featureText.map(({ icon, title, description }, index) => (
+                  <div
+                    className="flex flex-col bg-opacity-5 bg-black justify-between gap-6 rounded-3xl border p-6 transition-all hover:-mt-2 hover:mb-2"
+                    key={index}
+                  >
+                    <div className="grid gap-4">
+                      {icon}
+                      <h4 className="text-lg font-semibold text-primary">
+                        {title}
+                      </h4>
+                      <p className="text-base leading-relaxed text-gray-700 font-normal opacity-75">
+                        {description}
+                      </p>
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

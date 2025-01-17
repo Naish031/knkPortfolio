@@ -45,7 +45,7 @@ const FeaturedProjects = () => {
               size="lg"
               className={`w-[142px] h-[64px] rounded-full text-base ${
                 selectedTab === tab.value
-                  ? "bg-black text-white font-medium cursor-pointer hover:dark:bg-[#0B9443]"
+                  ? "bg-black text-white font-medium cursor-pointer "
                   : "bg-white text-black font-normal cursor-pointer hover:bg-[#0B9443] hover:text-white"
               }`}
               onClick={() => setSelectedTab(tab.value)}
@@ -122,13 +122,13 @@ const FeaturedProjects = () => {
                   </p>
                 </div>
 
-                <h3 className="w-full text-left text-xl md:text-2xl font-medium mt-1">
+                <h3 className="w-full text-left text-black text-xl md:text-2xl font-medium mt-1">
                   {project.title}
                 </h3>
               </div>
             ))
           ) : (
-            <p className="col-span-2 text-center text-lg font-medium">
+            <p className="col-span-2 text-center text-black text-lg font-medium">
               Currently, there are no projects listed.
             </p>
           )}
@@ -139,7 +139,7 @@ const FeaturedProjects = () => {
           <Link href="/projects">
             <Button
               size="lg"
-              className="bg-transparent text-black py-6 px-12 rounded-full dark:text-white text-lg md:text-xl border hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black border-black/10 dark:border-white min-h-[64px] md:min-h-[70px]"
+              className="bg-transparent text-black py-6 px-12 rounded-full text-lg md:text-xl border hover:bg-black hover:text-white  border-black/10 min-h-[64px] md:min-h-[70px]"
             >
               All Projects
             </Button>

@@ -24,12 +24,12 @@ export default function Footer() {
               /> */}
           </Link>
 
-          <Balancer>
+          <Balancer className="text-muted-foreground">
             K&K TEK Apartment 6, 3rd Floor, The Cottage Building Block C, Bahria
             Springs North, Bahria Town Phase 7, Rawalpindi
           </Balancer>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-muted-foreground">
           <h5>T: +92-310-3169998</h5>
           <h5>F: 051-5707222</h5>
         </div>

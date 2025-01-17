@@ -1,32 +1,31 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { BookOpen, MenuIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import { Dialog, DialogClose } from "./ui/dialog";
 import { Button } from "./ui/button";
-import {
-  //   NavigationMenu,
-  NavigationMenuLink,
-  //   NavigationMenuList,
-} from "./ui/navigation-menu";
-// import ModeToggle from "../mode-toggle"
+import { NavigationMenuLink } from "./ui/navigation-menu";
 import { SheetContent, SheetTrigger } from "./ui/sheet";
-import ModeToggle from "./mode-toggle";
 import Image from "next/image";
+import { DialogModal } from "./ui/DialogModal";
+// import ModeToggle from "./mode-toggle";
 
 export function NavBar() {
+  const [isTameerOpen, setIsTameerOpen] = React.useState(false);
+
   return (
     <div className="flex items-center min-w-full w-full fixed justify-center p-1 z-[50]">
-      <div className="flex justify-between md:w-[720px] lg:w-[960px] xl:w-[1100px] xxl:w-[1220px] w-[95%] border dark:border-zinc-900 dark:bg-black bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
+      <div className="flex justify-between md:w-[720px] lg:w-[960px] xl:w-[1100px] xxl:w-[1220px] w-[95%] border bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
         <Dialog>
           <SheetTrigger className="p-1 transition">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center dark:bg-white">
-                <MenuIcon className="text-white dark:text-black w-6 h-6 " />
+              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
+                <MenuIcon className="text-white w-6 h-6 " />
               </div>
               <div className="hidden md:flex items-center ml-4">
-                <span className="text-lg font-semibold dark:text-white">
+                <span className="text-lg font-semibold">
                   KnkTek Construction
                 </span>
               </div>
@@ -117,9 +116,9 @@ export function NavBar() {
                   </Button>
                 </Link>
               </DialogClose>
-              <div className="absolute bottom-2 left-3">
+              {/* <div className="absolute bottom-2 left-3">
                 <ModeToggle />
-              </div>
+              </div> */}
             </div>
           </SheetContent>
         </Dialog>
@@ -135,7 +134,7 @@ export function NavBar() {
                 height={29}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-1">KZA</span>
+              <span className="ml-1 text-[8px] lg:text-xs">KZA</span>
             </Button>
           </Link>
           <Link href="/">
@@ -148,12 +147,36 @@ export function NavBar() {
                 height={29}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-1">KNK</span>
+              <span className="ml-1 text-[8px] lg:text-xs">KNK</span>
             </Button>
           </Link>
-          <div className="max-[825px]:hidden">
+
+          <Button
+            variant="ghost"
+            className="px-0.5  "
+            onClick={() => setIsTameerOpen(true)}
+          >
+            <Image
+              src={"/assets/logos/TAMEER.png"}
+              alt="logo"
+              priority
+              width={45}
+              height={29}
+              className="object-contain aspect-[5/2] "
+            />
+            <span className="ml-1 text-[8px] lg:text-xs">TAMEER</span>
+          </Button>
+
+          <DialogModal
+            title="Coming Soon"
+            description="TAMEER section is under development. Stay tuned for updates!"
+            isOpen={isTameerOpen}
+            onClose={() => setIsTameerOpen(false)}
+          />
+
+          {/* <div className="max-[825px]:hidden">
             <ModeToggle />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
