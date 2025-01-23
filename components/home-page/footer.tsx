@@ -30,11 +30,11 @@ export default function Footer() {
           </Balancer>
         </div>
         <div className="flex flex-col gap-2 text-muted-foreground">
-          <h5>T: +92-310-3169998</h5>
+          {/* <h5>T: +92-310-3169998</h5> */}
           <h5>F: 051-5707222</h5>
         </div>
         <div className="flex flex-col gap-2">
-          <Link href="/privacy-policy">ceo@kktek.org</Link>
+          {/* <Link href="/privacy-policy">ceo@kktek.org</Link> */}
           <Link href="/terms-of-service">info@kzassociates.net</Link>
         </div>
       </Container>

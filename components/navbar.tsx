@@ -130,11 +130,11 @@ export function NavBar() {
                 src={"/assets/logos/kzLogo.png"}
                 alt="logo"
                 priority
-                width={45}
-                height={29}
+                width={65}
+                height={39}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-1 text-[8px] lg:text-xs">KZA</span>
+              {/* <span className="ml-1 text-[8px] lg:text-xs">KZA</span> */}
             </Button>
           </Link>
           <Link href="/">
@@ -143,11 +143,11 @@ export function NavBar() {
                 src={"/assets/logos/knkLogo.png"}
                 alt="logo"
                 priority
-                width={45}
-                height={29}
+                width={65}
+                height={39}
                 className="object-contain aspect-[5/2] "
               />
-              <span className="ml-1 text-[8px] lg:text-xs">KNK</span>
+              {/* <span className="ml-1 text-[8px] lg:text-xs">KNK</span> */}
             </Button>
           </Link>
 
@@ -164,7 +164,6 @@ export function NavBar() {
               height={29}
               className="object-contain aspect-[5/2] "
             />
-            <span className="ml-1 text-[8px] lg:text-xs">TAMEER</span>
           </Button>
 
           <DialogModal
