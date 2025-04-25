@@ -1,73 +1,44 @@
-// React and Next.js imports
-import Image from "next/image";
-import Link from "next/link";
-
-// Third-party library imports
-import Balancer from "react-wrap-balancer";
-
-// Local component imports
-import { Section } from "@/components/craft";
-import { Button } from "../ui/button";
-
-// Asset imports
-import heroBg from "@/public/assets/images/heroBg.png";
-
-// Data imports
-import heroData from "@/constants/hero";
+"use client";
+import { motion } from "motion/react";
+import React from "react";
+import { ImagesSlider } from "../ui/images-slider";
 
 const Hero = () => {
+  const images = [
+    "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
   return (
-    <Section className="flex flex-col items-center justify-center py-10 sm:py-14">
-      {/* <Container> */}
-      <div className="max-w-[95%] mx-auto">
-        <div className="relative not-prose mb-8 w-full overflow-hidden ">
-          <div className="max-h-[688px] w-full relative aspect-[10/14] md:aspect-[12/11] lg:aspect-[16/9] overflow-hidden rounded-[31px]">
-            <Image
-              className="h-full w-full object-cover object-center"
-              priority
-              src={heroBg}
-              // width={1216}
-              // height={688}
-              // fill
-              // sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              alt="hero image"
-              placeholder="blur"
-              style={{
-                borderRadius: "20px",
-              }}
-            />
+    <section className="relative">
+      <ImagesSlider className="h-[40rem]" images={images}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -80,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="size-full z-50 flex flex-col justify-end items-start "
+        >
+          <div className="hidden md:block bg-[#5f0f4e] m-2.5  py-2.5 px-4 md:m-4 md:py-4 md:px-6 xl:px-10 text-white rounded-lg shadow-lg backdrop-blur-sm ">
+            <motion.p className="font-bold text-xl md:text-4xl text-left py-4">
+              Where expertise <br /> meets excellence
+            </motion.p>
           </div>
-
-          <div className="absolute bottom-20 left-4 md:bottom-4 md:left-4 z-20">
-            <Balancer className="text-3xl md:text-5xl font-bold text-white">
-              {heroData.imageText}
-              <br />
-              {heroData.imageText2}
-            </Balancer>
-          </div>
-
-          <div className="absolute bottom-7 left-4 md:bottom-10 md:right-4 md:left-auto z-20">
-            <Button
-              asChild
-              className="w-fit rounded-full font-normal"
-              size={"lg"}
-              variant={"default"}
-            >
-              <Link className="not-prose" href="#contact">
-                {heroData.button.text}
-              </Link>
-            </Button>
-          </div>
-        </div>
-
-        <h3 className="text-muted-foreground lg:max-w-[90%] xl:max-w-[85%] xxl:max-w-[92%] mx-auto">
-          <Balancer className="text-3xl text-black md:text-4xl lg:text-5xl text-left lg:leading-tight">
-            {heroData.description}
-          </Balancer>
-        </h3>
+        </motion.div>
+      </ImagesSlider>
+      <div className="block md:hidden bg-[#5f0f4e] m-2.5  py-2.5 px-4 md:m-4 md:py-4 md:px-6 xl:px-10 text-white rounded-lg shadow-lg backdrop-blur-sm ">
+        <motion.p className="font-bold text-2xl md:text-4xl text-left py-4">
+          Where expertise <span className="block sm:inline"> meets excellence</span>
+        </motion.p>
       </div>
-      {/* </Container> */}
-    </Section>
+    </section>
   );
 };
 

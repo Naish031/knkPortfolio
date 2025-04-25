@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/navbar";
 import { ThemeProvider } from "./_provider";
 import { Layout } from "@/components/craft";
+import Nav from "@/components/nav";
 
-const interTight = Inter_Tight({ subsets: ["latin"] });
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "KnkTek Portfolio",
@@ -19,14 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <body className={interTight.className}>
+      <body className={urbanist.className}>
         {/* <ThemeProvider
           attribute="class"
           // defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         > */}
-        <NavBar />
+        {/* <NavBar /> */}
+        <Nav />
         {children}
         {/* </ThemeProvider> */}
       </body>

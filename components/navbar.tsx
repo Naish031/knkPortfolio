@@ -208,19 +208,3 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = "ListItem";
 
-{
-  /* <NavigationMenu>
-          <NavigationMenuList className="max-[825px]:hidden ">
-            <Link href="/" className="pl-2">
-              <div className="flex justify-center items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center dark:bg-white">
-                  <MenuIcon className="text-white dark:text-black w-6 h-6" />
-                </div>
-                <h1 className="ml-4 font-bold hidden lg:flex">
-                  KnkTek Construction.
-                </h1>
-              </div>
-            </Link>
-          </NavigationMenuList>
-        </NavigationMenu> */
-}
