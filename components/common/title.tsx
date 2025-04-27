@@ -7,7 +7,12 @@ interface TitleProps {
 
 const Title = ({ text, className = "" }: TitleProps) => {
   return (
-    <h1 className={cn("text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl", className)}>
+    <h1
+      className={cn(
+        "text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl",
+        className,
+      )}
+    >
       {text}
     </h1>
   );

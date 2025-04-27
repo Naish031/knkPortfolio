@@ -45,7 +45,7 @@ export function DialogModal({
           >
             <DialogUI.Panel className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
               {/* Title */}
-              <DialogUI.Title className="text-xl lg:text-3xl font-medium  text-gray-900">
+              <DialogUI.Title className="text-xl font-medium text-gray-900 lg:text-3xl">
                 {title}
               </DialogUI.Title>
 

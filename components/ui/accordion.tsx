@@ -15,13 +15,13 @@ export default function AccordionComponent() {
           className="my-4"
         >
           <Accordion.Trigger className="w-full font-bold">
-            <div className="w-full flex items-center justify-between my-2 ">
-              <Balancer className="text-xl text-left text-black ">
+            <div className="my-2 flex w-full items-center justify-between">
+              <Balancer className="text-left text-xl text-black">
                 {item.title}
               </Balancer>
-              <div className="bg-[#E6E6E6] p-2 rounded-lg cursor-pointer">
+              <div className="cursor-pointer rounded-lg bg-[#E6E6E6] p-2">
                 <Plus
-                  className="transition-transform duration-300 transform data-[state=open]:rotate-45 text-black "
+                  className="transform text-black transition-transform duration-300 data-[state=open]:rotate-45"
                   aria-hidden
                 />
               </div>
@@ -29,17 +29,17 @@ export default function AccordionComponent() {
           </Accordion.Trigger>
 
           <Accordion.Content>
-            <div className="flex flex-col lg:flex-row justify-between items-start gap-4 mb-5 max-h-max">
-              <p className="w-full xl:w-1/2 text-xl xl:text-[20px] lg:leading-normal xl:leading-relaxed font-medium text-black">
+            <div className="mb-5 flex max-h-max flex-col items-start justify-between gap-4 lg:flex-row">
+              <p className="w-full text-xl font-medium text-black lg:leading-normal xl:w-1/2 xl:text-[20px] xl:leading-relaxed">
                 {item.text}
               </p>
-              <div className="w-full xl:w-1/2 h-auto relative aspect-[4/2]">
+              <div className="relative aspect-[4/2] h-auto w-full xl:w-1/2">
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
                   fill
                   loading="lazy"
-                  className="object-contain absolute inset-0 h-full w-full !m-0 !p-0"
+                  className="absolute inset-0 !m-0 h-full w-full object-contain !p-0"
                 />
               </div>
             </div>

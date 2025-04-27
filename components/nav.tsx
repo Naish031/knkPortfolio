@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <header className="z-[999]">
       <Bounded c>
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <div className="text-xl font-bold">K&K Associates</div>
           <div className="relative md:hidden">
             <Example />

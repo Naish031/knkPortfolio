@@ -14,17 +14,17 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <Section
-      className="px-4 md:px-8 lg:px-12 bg-cover bg-center no-prose"
+      className="no-prose bg-cover bg-center px-4 md:px-8 lg:px-12"
       style={{
         backgroundImage: "url('/assets/images/contactBackgroundImage.png')",
       }}
       id="contact"
     >
-      <Container className="flex flex-col items-center gap-6 p-6 text-center max-w-[1220px]">
+      <Container className="flex max-w-[1220px] flex-col items-center gap-6 p-6 text-center">
         <div className="flex flex-col items-start justify-start gap-4 md:gap-8">
           <Title
             text="Your Trusted MEP Partner"
-            className="text-white lg:!text-6xl !font-bold !mb-0"
+            className="!mb-0 !font-bold text-white lg:!text-6xl"
           />
           <p className="text-left text-lg text-white md:text-3xl lg:text-5xl">
             Innovative mechanical, electrical, and plumbing solutions for every
@@ -32,7 +32,7 @@ const Contact = () => {
           </p>
 
           <Link href="mailto:naish031@gmail.com">
-            <Button className="min-w-40 xl:max-w-48 bg-[#0B9443] hover:bg-[#0B9443]/80 rounded-full py-8 max-h-16 text-white font-medium text-lg md:text-2xl xl:max-h-20">
+            <Button className="max-h-16 min-w-40 rounded-full bg-[#0B9443] py-8 text-lg font-medium text-white hover:bg-[#0B9443]/80 md:text-2xl xl:max-h-20 xl:max-w-48">
               Contact
             </Button>
           </Link>

@@ -1,18 +1,17 @@
-import { Main, Section } from "@/components/craft";
-
 import Hero from "@/components/home-page/hero";
 import Footer from "@/components/home-page/footer";
 import About from "@/components/home-page/about";
+import Companies from "@/components/home-page/companies";
 
 export default function Home() {
   return (
-    <Main>
+    <main>
       <section>
         <Hero />
         <About />
-        {/* <Servcies /> */}
+        <Companies />
         <Footer />
       </section>
-    </Main>
+    </main>
   );
 }

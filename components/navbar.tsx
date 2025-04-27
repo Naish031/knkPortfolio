@@ -16,15 +16,15 @@ export function NavBar() {
   const [isTameerOpen, setIsTameerOpen] = React.useState(false);
 
   return (
-    <div className="flex items-center min-w-full w-full fixed justify-center p-1 z-[50]">
-      <div className="flex justify-between md:w-[720px] lg:w-[960px] xl:w-[1100px] xxl:w-[1220px] w-[95%] border bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
+    <div className="fixed z-[50] flex w-full min-w-full items-center justify-center p-1">
+      <div className="relative flex w-[95%] justify-between rounded-xl border border-white border-opacity-20 bg-white bg-opacity-10 p-2 shadow-lg backdrop-blur-lg backdrop-filter md:w-[720px] lg:w-[960px] xl:w-[1100px] xxl:w-[1220px]">
         <Dialog>
           <SheetTrigger className="p-1 transition">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-                <MenuIcon className="text-white w-6 h-6 " />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black">
+                <MenuIcon className="h-6 w-6 text-white" />
               </div>
-              <div className="hidden md:flex items-center ml-4">
+              <div className="ml-4 hidden items-center md:flex">
                 <span className="text-lg font-semibold">
                   KnkTek Construction
                 </span>
@@ -33,20 +33,20 @@ export function NavBar() {
           </SheetTrigger>
           <SheetContent
             side="left"
-            className="mt-1 bg-[#0B9443] max-h-[365px] !max-w-[300px] rounded-3xl border-none"
+            className="mt-1 max-h-[365px] !max-w-[300px] rounded-3xl border-none bg-[#0B9443]"
           >
-            <div className="flex flex-col mt-[4.5rem] z-[99]">
+            <div className="z-[99] mt-[4.5rem] flex flex-col">
               <DialogClose asChild>
                 <Link
                   href="/"
-                  className="border-t border-white/50 py-1.5  w-full flex justify-around items-center"
+                  className="flex w-full items-center justify-around border-t border-white/50 py-1.5"
                 >
-                  <span className=" w-1/5 text-base text-white/50 text-center">
+                  <span className="w-1/5 text-center text-base text-white/50">
                     01
                   </span>
                   <Button
                     variant="ghost"
-                    className="w-4/5 rounded-none text-white text-xl !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
+                    className="w-4/5 !justify-start rounded-none text-xl text-white hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Home
                   </Button>
@@ -55,14 +55,14 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link
                   href="#featured-projects"
-                  className="w-full border-t border-white/50 py-1.5 flex justify-around items-center"
+                  className="flex w-full items-center justify-around border-t border-white/50 py-1.5"
                 >
-                  <span className=" w-1/5 text-base text-white/50 text-center">
+                  <span className="w-1/5 text-center text-base text-white/50">
                     02
                   </span>
                   <Button
                     variant="ghost"
-                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
+                    className="w-4/5 !justify-start rounded-none text-xl text-white hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Featured Projects
                   </Button>
@@ -71,14 +71,14 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link
                   href="#ourServices"
-                  className="border-t border-white/50 py-1.5 w-full flex justify-around items-center"
+                  className="flex w-full items-center justify-around border-t border-white/50 py-1.5"
                 >
-                  <span className=" w-1/5 text-base text-white/50 text-center">
+                  <span className="w-1/5 text-center text-base text-white/50">
                     03
                   </span>
                   <Button
                     variant="ghost"
-                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
+                    className="w-4/5 !justify-start rounded-none text-xl text-white hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Our Services
                   </Button>
@@ -87,14 +87,14 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link
                   href="#chooseUs"
-                  className="border-t border-white/50 py-1.5 w-full flex justify-around items-center"
+                  className="flex w-full items-center justify-around border-t border-white/50 py-1.5"
                 >
-                  <span className=" w-1/5 text-base text-white/50 text-center">
+                  <span className="w-1/5 text-center text-base text-white/50">
                     04
                   </span>
                   <Button
                     variant="ghost"
-                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
+                    className="w-4/5 !justify-start rounded-none text-xl text-white hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Why Us?
                   </Button>
@@ -103,14 +103,14 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link
                   href="#contact"
-                  className="border-t border-b border-white/50 py-1.5  w-full flex justify-around items-center"
+                  className="flex w-full items-center justify-around border-b border-t border-white/50 py-1.5"
                 >
-                  <span className=" w-1/5 text-base text-white/50 text-center">
+                  <span className="w-1/5 text-center text-base text-white/50">
                     05
                   </span>
                   <Button
                     variant="ghost"
-                    className="w-4/5 rounded-none text-xl text-white !justify-start hover:!bg-[#0B9443]/90 hover:text-white"
+                    className="w-4/5 !justify-start rounded-none text-xl text-white hover:!bg-[#0B9443]/90 hover:text-white"
                   >
                     Contact Us
                   </Button>
@@ -123,7 +123,7 @@ export function NavBar() {
           </SheetContent>
         </Dialog>
 
-        <div className="flex items-center gap-2 ">
+        <div className="flex items-center gap-2">
           <Link href="/">
             <Button variant="ghost" className="px-0.5">
               <Image
@@ -132,7 +132,7 @@ export function NavBar() {
                 priority
                 width={65}
                 height={39}
-                className="object-contain aspect-[5/2] "
+                className="aspect-[5/2] object-contain"
               />
               {/* <span className="ml-1 text-[8px] lg:text-xs">KZA</span> */}
             </Button>
@@ -145,7 +145,7 @@ export function NavBar() {
                 priority
                 width={65}
                 height={39}
-                className="object-contain aspect-[5/2] "
+                className="aspect-[5/2] object-contain"
               />
               {/* <span className="ml-1 text-[8px] lg:text-xs">KNK</span> */}
             </Button>
@@ -153,7 +153,7 @@ export function NavBar() {
 
           <Button
             variant="ghost"
-            className="px-0.5  "
+            className="px-0.5"
             onClick={() => setIsTameerOpen(true)}
           >
             <Image
@@ -162,7 +162,7 @@ export function NavBar() {
               priority
               width={45}
               height={29}
-              className="object-contain aspect-[5/2] "
+              className="aspect-[5/2] object-contain"
             />
           </Button>
 
@@ -192,13 +192,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            className,
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>
@@ -207,4 +207,3 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
-

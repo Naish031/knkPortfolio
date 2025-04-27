@@ -47,21 +47,21 @@ const featureText: FeatureText[] = [
 const WhyUs = () => {
   return (
     <Section
-      className="not-prose flex flex-col gap-6 h-full !pb-0"
+      className="not-prose flex h-full flex-col gap-6 !pb-0"
       id="chooseUs"
     >
       <Container className="!pb-0">
-        <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-3">
+        <div className="grid w-full grid-cols-1 gap-3 xl:grid-cols-2">
           {/* Image Div also grid column 1 */}
-          <div className="w-full h-full">
+          <div className="h-full w-full">
             {/* image container */}
-            <div className="relative w-full h-full aspect-[7/5] overflow-hidden">
+            <div className="relative aspect-[7/5] h-full w-full overflow-hidden">
               <Image
                 src={"/assets/images/whyUs/highRiseBuilding.png"}
                 alt="sky rise building"
                 fill
                 loading="lazy"
-                className="object-cover absolute inset-0 w-full h-full"
+                className="absolute inset-0 h-full w-full object-cover"
                 style={{
                   borderRadius: "20px",
                 }}
@@ -70,29 +70,29 @@ const WhyUs = () => {
           </div>
 
           {/* Featured Text Div and also grid column second */}
-          <div className="mt-6 xl:mt-0 w-full my-auto">
-            <div className="border-4 border-primary p-2.5 rounded-2xl">
+          <div className="my-auto mt-6 w-full xl:mt-0">
+            <div className="border-primary rounded-2xl border-4 p-2.5">
               {/* Why US? & Description */}
               <div className="flex flex-col gap-6">
-                <h2 className="text-5xl md:text-6xl font-bold text-black">
+                <h2 className="text-5xl font-bold text-black md:text-6xl">
                   {companyDetails.title}
                 </h2>
-                <p className="text-xl md:text-2xl text-black font-normal opacity-70">
+                <p className="text-xl font-normal text-black opacity-70 md:text-2xl">
                   {companyDetails.description}
                 </p>
               </div>
-              <div className="mt-3 grid gap-6 md:mt-6 md:grid-cols-2 rounded-2xl">
+              <div className="mt-3 grid gap-6 rounded-2xl md:mt-6 md:grid-cols-2">
                 {featureText.map(({ icon, title, description }, index) => (
                   <div
-                    className="flex flex-col bg-opacity-5 bg-black justify-between gap-6 rounded-3xl border p-6 transition-all hover:-mt-2 hover:mb-2"
+                    className="flex flex-col justify-between gap-6 rounded-3xl border bg-black bg-opacity-5 p-6 transition-all hover:-mt-2 hover:mb-2"
                     key={index}
                   >
                     <div className="grid gap-4">
                       {icon}
-                      <h4 className="text-lg font-semibold text-primary">
+                      <h4 className="text-primary text-lg font-semibold">
                         {title}
                       </h4>
-                      <p className="text-base leading-relaxed text-gray-700 font-normal opacity-75">
+                      <p className="text-base font-normal leading-relaxed text-gray-700 opacity-75">
                         {description}
                       </p>
                     </div>

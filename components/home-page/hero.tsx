@@ -24,18 +24,19 @@ const Hero = () => {
           transition={{
             duration: 0.6,
           }}
-          className="size-full z-50 flex flex-col justify-end items-start "
+          className="z-50 flex size-full flex-col items-start justify-end"
         >
-          <div className="hidden md:block bg-[#5f0f4e] m-2.5  py-2.5 px-4 md:m-4 md:py-4 md:px-6 xl:px-10 text-white rounded-lg shadow-lg backdrop-blur-sm ">
-            <motion.p className="font-bold text-xl md:text-4xl text-left py-4">
+          <div className="m-2.5 hidden rounded-lg bg-[#5f0f4e] px-4 py-2.5 text-white shadow-lg backdrop-blur-sm md:m-4 md:block md:px-6 md:py-4 xl:px-10">
+            <motion.p className="py-4 text-left text-xl font-bold md:text-4xl">
               Where expertise <br /> meets excellence
             </motion.p>
           </div>
         </motion.div>
       </ImagesSlider>
-      <div className="block md:hidden bg-[#5f0f4e] m-2.5  py-2.5 px-4 md:m-4 md:py-4 md:px-6 xl:px-10 text-white rounded-lg shadow-lg backdrop-blur-sm ">
-        <motion.p className="font-bold text-2xl md:text-4xl text-left py-4">
-          Where expertise <span className="block sm:inline"> meets excellence</span>
+      <div className="m-2.5 block rounded-lg bg-[#5f0f4e] px-4 py-2.5 text-white shadow-lg backdrop-blur-sm md:m-4 md:hidden md:px-6 md:py-4 xl:px-10">
+        <motion.p className="py-4 text-left text-2xl font-bold md:text-4xl">
+          Where expertise{" "}
+          <span className="block sm:inline"> meets excellence</span>
         </motion.p>
       </div>
     </section>

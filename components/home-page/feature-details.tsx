@@ -6,7 +6,7 @@ const FeatureDetails = () => {
   return (
     <Container>
       <Section
-        className="mb-6 md:mb-12 px-4 md:px-8 bg-cover bg-center relative w-full h-full not-prose"
+        className="not-prose relative mb-6 h-full w-full bg-cover bg-center px-4 md:mb-12 md:px-8"
         style={{
           backgroundImage: "url('assets/images/whyUs/whyUsBg.png')",
           backgroundSize: "cover",
@@ -14,19 +14,19 @@ const FeatureDetails = () => {
           borderRadius: "20px",
         }}
       >
-        <Container className="!p-0 flex flex-col gap-6 md:gap-16 lg:gap-24 xl:gap-32">
-          <h2 className="text-4xl md:text-6xl font-bold text-white">
+        <Container className="flex flex-col gap-6 !p-0 md:gap-16 lg:gap-24 xl:gap-32">
+          <h2 className="text-4xl font-bold text-white md:text-6xl">
             We succeed <br /> with teamwork.
           </h2>
 
           {/* Overlay Content */}
-          <div className="w-full z-30 grid md:grid-cols-2 xl:grid-cols-4 gap-2">
+          <div className="z-30 grid w-full gap-2 md:grid-cols-2 xl:grid-cols-4">
             {companyProjectsInfo.map(({ number, title }, index) => (
               <div
                 key={index}
-                className="w-full flex flex-col items-start justify-between gap-2 bg-black bg-opacity-50 p-4 rounded-2xl shadow-md border border-[#0B9443]"
+                className="flex w-full flex-col items-start justify-between gap-2 rounded-2xl border border-[#0B9443] bg-black bg-opacity-50 p-4 shadow-md"
               >
-                <p className="text-4xl font-bold text-white ">{number}</p>
+                <p className="text-4xl font-bold text-white">{number}</p>
                 <p className="text-md text-[#0B9443]">{title}</p>
               </div>
             ))}

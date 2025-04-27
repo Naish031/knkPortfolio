@@ -21,37 +21,40 @@ const AllProjects = () => {
   const filteredProjects = featuredProjects.filter((project) =>
     selectedTab === "allProjects"
       ? true
-      : project.categories.includes(selectedTab)
+      : project.categories.includes(selectedTab),
   );
 
   return (
     <Section className="border-t border-gray-200" id="all-projects">
       <Container>
-        <Title text="All Projects" className="text-left ml-2 font-semibold mt-5 mb-10" />
+        <Title
+          text="All Projects"
+          className="mb-10 ml-2 mt-5 text-left font-semibold"
+        />
 
-        <div className="grid items-stretch gap-4 md:gap-8 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid items-stretch gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-12">
           {/* Render filtered projects */}
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (
               <div
                 key={project.title}
-                className="not-prose flex flex-col items-center justify-center gap-1 overflow-hidden relative"
+                className="not-prose relative flex flex-col items-center justify-center gap-1 overflow-hidden"
               >
-                <div className="w-full group overflow-hidden relative md:w-full h-auto aspect-[8/6] rounded-[30px]">
+                <div className="group relative aspect-[8/6] h-auto w-full overflow-hidden rounded-[30px] md:w-full">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
                     width={350}
                     height={350}
-                    className="object-cover absolute inset-0 h-full w-full rounded-[30px]"
+                    className="absolute inset-0 h-full w-full rounded-[30px] object-cover"
                   />
                   {/* Hover effect details */}
-                  <div className="absolute inset-0 bg-black/50 rounded-[30px] flex flex-col items-start justify-end text-white p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out">
+                  <div className="absolute inset-0 flex translate-y-full flex-col items-start justify-end rounded-[30px] bg-black/50 p-4 text-white transition-transform duration-700 ease-in-out group-hover:translate-y-0">
                     <div className="flex items-center">
                       <Image
                         src={project.details.contractCost.icon}
                         alt="Contract Cost"
-                        className="w-4 h-4 mr-2"
+                        className="mr-2 h-4 w-4"
                         width={16}
                         height={16}
                       />
@@ -61,7 +64,7 @@ const AllProjects = () => {
                       <Image
                         src={project.details.height.icon}
                         alt="Height"
-                        className="w-4 h-4 mr-2"
+                        className="mr-2 h-4 w-4"
                         width={16}
                         height={16}
                       />
@@ -71,7 +74,7 @@ const AllProjects = () => {
                       <Image
                         src={project.details.time.icon}
                         alt="Time"
-                        className="w-4 h-4 mr-2"
+                        className="mr-2 h-4 w-4"
                         width={16}
                         height={16}
                       />
@@ -82,7 +85,7 @@ const AllProjects = () => {
                       <Image
                         src={project.details.typeOfWorkIcon}
                         alt="Type of Work"
-                        className="w-4 h-4 mr-2"
+                        className="mr-2 h-4 w-4"
                         width={16}
                         height={16}
                       />
@@ -90,13 +93,13 @@ const AllProjects = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-4 left-4 rounded-2xl bg-white py-1 w-28 md:max-w-32">
-                  <p className="text-black text-center text-xs">
+                <div className="absolute left-4 top-4 w-28 rounded-2xl bg-white py-1 md:max-w-32">
+                  <p className="text-center text-xs text-black">
                     {project.location}
                   </p>
                 </div>
 
-                <h3 className="w-full text-left text-xl md:text-2xl font-medium mt-1">
+                <h3 className="mt-1 w-full text-left text-xl font-medium md:text-2xl">
                   {project.title}
                 </h3>
               </div>
