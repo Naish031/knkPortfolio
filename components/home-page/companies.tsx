@@ -5,24 +5,22 @@ import Title from "../common/title";
 import Bounded from "../common/bounded";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Companies() {
   const [selectedCompany, setSelectedCompany] = useState<string | null>(
     "k&k-tek",
   );
-  const [isInView, setIsInView] = useState(false);
   const [isChanging, setIsChanging] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const controls = useAnimation();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.1 },
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
 
   const handleCompanyChange = (id: string) => {
     setIsChanging(true);
@@ -65,24 +63,38 @@ export default function Companies() {
     },
   ];
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
-    <section className="bg-white" ref={sectionRef}>
+    <section className="bg-white" ref={ref}>
       <Bounded>
         <div className="flex flex-col gap-8">
-          <Title text="Our Companies" />
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={itemVariants}
+          >
+            <Title text="Our Companies" className="font-medium" />
+          </motion.div>
 
           {/* Mobile Layout */}
           <div className="flex flex-col gap-8 md:hidden">
             {companies.map((company, index) => (
-              <div
+              <motion.div
                 key={company.id}
-                className={cn(
-                  "relative w-full transition-all duration-500 ease-out",
-                  isInView
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-5 opacity-0",
-                )}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                variants={itemVariants}
+                initial="hidden"
+                animate={controls}
+                custom={index}
+                transition={{ delay: index * 0.1 }}
+                className="relative w-full"
               >
                 <div
                   className={cn(
@@ -97,9 +109,8 @@ export default function Companies() {
                     width={55}
                     height={55}
                     priority
-                    className="transition-opacity duration-500"
                   />
-                  <p className="text-2xl">{company.name}</p>
+                  <p className="text-xl">{company.name}</p>
                 </div>
 
                 {selectedCompany === company.id && (
@@ -109,10 +120,10 @@ export default function Companies() {
                         src={company.backgroundImage}
                         alt=""
                         fill
-                        className="object-cover transition-opacity duration-500"
+                        className="object-cover"
                       />
                     </div>
-                    <div className="absolute top-4 m-2 rounded-lg border border-gray-200 bg-white/90 p-4 shadow-lg backdrop-blur-sm">
+                    <div className="absolute top-3 w-full max-w-md rounded-lg border border-gray-200 bg-white/90 p-3 shadow-lg sm:p-5">
                       <p className="mb-4 whitespace-pre-line text-sm text-black md:text-base">
                         {company.description}
                       </p>
@@ -122,7 +133,7 @@ export default function Companies() {
                     </div>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -130,19 +141,18 @@ export default function Companies() {
           <div className="hidden md:flex md:flex-col">
             <div className="flex justify-between gap-8">
               {companies.map((company, index) => (
-                <div
+                <motion.div
                   key={company.id}
-                  className={cn(
-                    "w-full transition-all duration-500 ease-out",
-                    isInView
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-5 opacity-0",
-                  )}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate={controls}
+                  custom={index}
+                  transition={{ delay: index * 0.1 }}
+                  className="w-full"
                 >
                   <div
                     className={cn(
-                      "flex cursor-pointer items-center justify-center gap-4 rounded-lg bg-pink-50 p-8 shadow-md transition-all duration-300 hover:scale-[1.02]",
+                      "flex cursor-pointer items-center justify-center gap-4 rounded-lg bg-pink-50 p-8 shadow-md transition-all duration-300 hover:scale-105",
                       selectedCompany === company.id &&
                         "bg-[#5f0f4e] text-white",
                     )}
@@ -154,20 +164,19 @@ export default function Companies() {
                       width={55}
                       height={55}
                       priority
-                      className="transition-opacity duration-500"
                     />
-                    <p className="text-2xl">{company.name}</p>
+                    <p className="text-xl">{company.name}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {selectedCompany && (
-              <div
-                className={cn(
-                  "relative mt-8 w-full rounded-lg transition-opacity duration-300",
-                  isChanging ? "opacity-0" : "opacity-100",
-                )}
+              <motion.div
+                className="relative mt-8 w-full rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isChanging ? 0 : 1 }}
+                transition={{ duration: 0.3 }}
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                   <Image
@@ -177,10 +186,7 @@ export default function Companies() {
                     }
                     alt=""
                     fill
-                    className={cn(
-                      "object-cover transition-opacity duration-500",
-                      isInView ? "opacity-100" : "opacity-0",
-                    )}
+                    className="object-cover"
                     quality={100}
                   />
                 </div>
@@ -191,11 +197,11 @@ export default function Companies() {
                         ?.description
                     }
                   </p>
-                  <button className="rounded-lg border border-black px-4 py-2.5 text-sm font-medium text-black transition-colors hover:bg-black hover:text-white md:text-base">
+                  <button className="rounded-lg border border-black px-4 py-2.5 text-sm font-medium text-black transition-colors hover:bg-black hover:text-white">
                     Learn More
                   </button>
                 </div>
-              </div>
+              </motion.div>
             )}
           </div>
         </div>

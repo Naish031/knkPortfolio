@@ -6,12 +6,10 @@ import Companies from "@/components/home-page/companies";
 export default function Home() {
   return (
     <main>
-      <section>
-        <Hero />
-        <About />
-        <Companies />
-        <Footer />
-      </section>
+      <Hero />
+      <About />
+      <Companies />
+      <Footer />
     </main>
   );
 }

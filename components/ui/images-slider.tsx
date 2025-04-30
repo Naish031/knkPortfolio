@@ -87,11 +87,11 @@ export const ImagesSlider = ({
     initial: {
       scale: 0,
       opacity: 0,
-      rotateX: 45,
+      // rotateX: 45,
     },
     visible: {
       scale: 1,
-      rotateX: 0,
+      // rotateX: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
