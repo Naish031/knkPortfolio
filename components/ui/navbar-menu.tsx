@@ -22,6 +22,7 @@ export const MenuItem = ({
   children,
   icon,
   className,
+  href = "#",
 }: {
   setActive: (item: string) => void;
   active: string | null;
@@ -29,9 +30,10 @@ export const MenuItem = ({
   children?: React.ReactNode;
   icon?: React.ReactNode;
   className?: string;
+  href?: string;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <Link href={href} onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         className={cn(
@@ -77,7 +79,7 @@ export const MenuItem = ({
           )}
         </motion.div>
       )}
-    </div>
+    </Link>
   );
 };
 
@@ -91,7 +93,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="shadow-input relative flex items-center justify-between space-x-4 bg-white px-8 py-4"
+      className="relative flex items-center justify-between space-x-4 bg-white px-8 py-4 shadow-input"
     >
       {children}
     </nav>

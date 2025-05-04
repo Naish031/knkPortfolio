@@ -4,6 +4,7 @@ import { BackgroundLines } from "@/components/ui/background-lines";
 import { companies, CompanySlug } from "@/data/companies";
 import { ArrowBigDown } from "lucide-react";
 import Image from "next/image";
+import Services from "../components/services";
 
 export async function generateStaticParams() {
   return Object.keys(companies).map((slug) => ({
@@ -44,7 +45,7 @@ export default function CompanyPage({
   return (
     <section>
       <Bounded>
-        <div className="relative flex flex-col-reverse md:flex-row md:items-start md:gap-12">
+        <section className="relative flex flex-col-reverse md:flex-row md:items-start md:gap-12">
           <div className="w-full flex-1 md:order-1">
             <h1 className="my-6 text-xl font-medium text-black md:text-3xl">
               {company.title}
@@ -75,7 +76,11 @@ export default function CompanyPage({
               />
             </div>
           </div>
-        </div>
+        </section>
+
+        <section>
+          <Services companySlug={params.company} />
+        </section>
       </Bounded>
     </section>
   );

@@ -10,38 +10,43 @@ export const companies = {
       "Our Vision":
         "To be the global leader in building solutions, renowned for our reliability, technical expertise, and commitment to excellence in engineering and construction.",
     },
-    services: [
-      {
-        title: "HVAC",
-        description:
-          "Comprehensive heating, ventilation, and air conditioning solutions for superior indoor environments.",
-        icon: "🏗️",
-      },
-      {
-        title: "Firefighting Works",
-        description:
-          "State-of-the-art fire protection services to safeguard life and property.",
-        icon: "🏗️",
-      },
-      {
-        title: "Plumbing Work",
-        description:
-          "Advanced systems ensuring optimal water distribution, sanitation, and waste management.",
-        icon: "🏗️",
-      },
-      {
-        title: "Electrical Work",
-        description:
-          "Efficient power distribution and control systems designed to international standards.",
-        icon: "🏗️",
-      },
-      {
-        title: "Civil Work",
-        description:
-          "Structurally sound and aesthetically remarkable infrastructure solutions.",
-        icon: "🏗️",
-      },
-    ],
+    services: {
+      heading: "Our Services",
+      description:
+        "Today, we are one of the largest Engineering firms in the country, with a workforce of over 1000 dedicated employees led by a team of seasoned professionals. KNK has built and maintained a robust portfolio of satisfied customers across Pakistan, offering comprehensive services in HVAC, M.E.P, power generation, civil construction, and operation & maintenance.",
+      list: [
+        {
+          title: "HVAC",
+          description:
+            "Comprehensive heating, ventilation, and air conditioning solutions for superior indoor environments.",
+          icon: "1",
+        },
+        {
+          title: "Firefighting Works",
+          description:
+            "State-of-the-art fire protection services to safeguard life and property.",
+          icon: "2",
+        },
+        {
+          title: "Plumbing Work",
+          description:
+            "Advanced systems ensuring optimal water distribution, sanitation, and waste management.",
+          icon: "3",
+        },
+        {
+          title: "Electrical Work",
+          description:
+            "Efficient power distribution and control systems designed to international standards.",
+          icon: "4",
+        },
+        {
+          title: "Civil Work",
+          description:
+            "Structurally sound and aesthetically remarkable infrastructure solutions.",
+          icon: "5",
+        },
+      ],
+    },
   },
   kza: {
     title: "About KZA (SMC-Pvt) Ltd",
@@ -54,38 +59,55 @@ export const companies = {
       "Our Vision":
         "To be recognized as a benchmark for engineering consultancy, offering unparalleled expertise and sustainable solutions in MEP design, project management, and supervision.",
     },
-    services: [
-      {
-        title: "Project Management Services",
-        description:
-          "Overseeing projects with precision, ensuring timely execution, and budget control.",
-        icon: "🏗️",
-      },
-      {
-        title: "MEP Design Services",
-        description:
-          "Comprehensive HVAC, fire protection, plumbing, and electrical system designs.",
-        icon: "🏗️",
-      },
-      {
-        title: "Supervision & Quality Assurance",
-        description:
-          "Maintaining the highest standards of safety, functionality, and sustainability.",
-        icon: "🏗️",
-      },
-      {
-        title: "Innovation & Sustainability",
-        description:
-          "Crafting solutions that meet the newest industry trends and environmental standards.",
-        icon: "🏗️",
-      },
-    ],
+    services: {
+      heading: "Our Services",
+      description:
+        "KZ Associates is your trusted partner for transformative engineering solutions, setting industry standards and driving success through excellence.",
+      list: [
+        {
+          title: "Project Management Services",
+          description:
+            "Overseeing projects with precision, ensuring timely execution, and budget control.",
+          icon: "1",
+        },
+        {
+          title: "MEP Design Services",
+          description:
+            "Comprehensive HVAC, fire protection, plumbing, and electrical system designs.",
+          icon: "2",
+        },
+        {
+          title: "Supervision & Quality Assurance",
+          description:
+            "Maintaining the highest standards of safety, functionality, and sustainability.",
+          icon: "3",
+        },
+        {
+          title: "Innovation & Sustainability",
+          description:
+            "Crafting solutions that meet the newest industry trends and environmental standards.",
+          icon: "4",
+        },
+      ],
+    },
   },
   kktameer: {
     title: "About K&K Tameer (SMC-Pvt) Ltd",
     image: "https://framerusercontent.com/images/94iei98eKWCkMINJ8Llgrr1A.jpg",
     content: "Coming Soon",
     subheadings: {},
+    services: {
+      heading: "Our Services",
+      description:
+        "K&K Tameer is your trusted partner for transformative engineering solutions, setting industry standards and driving success through excellence.",
+      list: [
+        {
+          title: "Coming Soon",
+          description: "Coming Soon",
+          icon: "🏗️",
+        },
+      ],
+    },
   },
 } as const;
 

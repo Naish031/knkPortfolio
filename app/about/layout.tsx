@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
-import { Layout } from "@/components/craft";
-import Footer from "@/components/home-page/footer";
-import Navbar from "@/components/navbar";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,11 +13,5 @@ export default function AboutLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      {/* <Navbar /> */}
-      <div>{children}</div>
-      {/* <Footer /> */}
-    </>
-  );
+  return <>{children}</>;
 }
