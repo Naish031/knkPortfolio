@@ -7,10 +7,16 @@ export default function Bounded({
 }: {
   children: React.ReactNode;
   className?: string;
-  yPadding?: "sm" | "base" | "lg";
+  yPadding?: "sm" | "base" | "lg" | "none";
 }) {
   const yPaddingClasses =
-    yPadding === "sm" ? "py-2" : yPadding === "lg" ? "py-6" : "py-5";
+    yPadding === "none"
+      ? ""
+      : yPadding === "sm"
+      ? "py-2"
+      : yPadding === "lg"
+      ? "py-6"
+      : "py-5";
 
   return (
     <div

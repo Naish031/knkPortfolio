@@ -166,7 +166,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative flex items-center justify-between space-x-4 bg-white px-8 py-4 shadow-input"
+      className="relative flex items-center justify-between space-x-4 bg-white py-4"
     >
       {children}
     </nav>

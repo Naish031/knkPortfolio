@@ -30,7 +30,7 @@ export default function Contact() {
               }
               alt="Contact Us"
               fill
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
             />

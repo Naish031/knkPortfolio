@@ -9,7 +9,7 @@ const Title = ({ text, className }: TitleProps) => {
   return (
     <h1
       className={cn(
-        "text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl",
+        "text-3xl font-semibold tracking-tight md:text-4xl",
         className,
       )}
     >

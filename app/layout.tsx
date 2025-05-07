@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./_provider";
-import { Layout } from "@/components/craft";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/home-page/footer";
 
@@ -19,19 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Layout>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={"scroll-smooth antialiased focus:scroll-auto"}
+    >
       <body className={urbanist.className}>
-        {/* <ThemeProvider
-          attribute="class"
-          // defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        > */}
         <Navbar />
-        <div className="pt-[70px]">{children}</div>
+        <div className="pt-16">{children}</div>
         <Footer />
-        {/* </ThemeProvider> */}
       </body>
-    </Layout>
+    </html>
   );
 }

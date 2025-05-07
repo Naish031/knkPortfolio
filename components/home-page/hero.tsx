@@ -2,17 +2,19 @@
 import { motion } from "motion/react";
 import React from "react";
 import { ImagesSlider } from "../ui/images-slider";
+import Bounded from "../common/bounded";
 
 const Hero = () => {
+
   const images = [
     "/assets/images/homepage/heroOne.png",
     "/assets/images/homepage/heroTwo.png",
     "/assets/images/homepage/heroThree.png",
-    "/assets/images/homepage/heroFour.png",
   ];
+
   return (
-    <section className="relative">
-      <ImagesSlider className="h-[40rem]" images={images}>
+    <Bounded className="relative" yPadding="lg">
+      <ImagesSlider className="h-[40rem] rounded-lg" images={images}>
         <motion.div
           initial={{
             opacity: 0,
@@ -40,7 +42,7 @@ const Hero = () => {
           <span className="block sm:inline"> meets excellence</span>
         </motion.p>
       </div>
-    </section>
+    </Bounded>
   );
 };
 

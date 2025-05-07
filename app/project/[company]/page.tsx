@@ -38,7 +38,7 @@ export default function ProjectsPage({
         <div className="w-full flex-1 md:order-1">
           <Title
             text={companyProject.heading}
-            className="my-6 text-xl font-medium md:text-3xl"
+            className="my-6 text-xl font-medium md:text-2xl"
           />
 
           <div className="mx-auto max-w-screen-xxl">
