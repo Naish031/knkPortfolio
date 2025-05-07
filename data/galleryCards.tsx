@@ -55,7 +55,6 @@ export const cardContent = [
   },
 ];
 
-// Helper to get card content
 export const getCard = (index: number) => {
   const { title, description } = cardContent[index % cardContent.length];
   return <SkeletonCard title={title} description={description} />;

@@ -87,11 +87,9 @@ export const ImagesSlider = ({
     initial: {
       scale: 0,
       opacity: 0,
-      // rotateX: 45,
     },
     visible: {
       scale: 1,
-      // rotateX: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
@@ -100,7 +98,6 @@ export const ImagesSlider = ({
     },
     upExit: {
       opacity: 1,
-      // y: "-150%",
       x: "-150%",
       transition: {
         duration: 1,
@@ -108,7 +105,6 @@ export const ImagesSlider = ({
     },
     downExit: {
       opacity: 1,
-      // y: "150%",
       x: "150%",
       transition: {
         duration: 1,

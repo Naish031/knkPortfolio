@@ -15,73 +15,6 @@ const transition = {
   restSpeed: 0.001,
 };
 
-// export const MenuItem = ({
-//   setActive,
-//   active,
-//   item,
-//   children,
-//   icon,
-//   className,
-//   href = "#",
-// }: {
-//   setActive: (item: string) => void;
-//   active: string | null;
-//   item: string;
-//   children?: React.ReactNode;
-//   icon?: React.ReactNode;
-//   className?: string;
-//   href?: string;
-// }) => {
-//   return (
-//     <Link href={href} onMouseEnter={() => setActive(item)} className="relative">
-//       <motion.p
-//         transition={{ duration: 0.3 }}
-//         className={cn(
-//           "group flex w-[84px] cursor-pointer items-center justify-center text-black hover:font-semibold hover:text-[#5f0f4e]",
-//         )}
-//       >
-//         {item}
-
-//         <span>
-//           {icon && (
-//             <ChevronDownIcon
-//               className={cn(
-//                 "ml-1 h-4 w-4 text-gray-500 transition-transform duration-200",
-//                 active == item && "rotate-180",
-//                 "group-hover:rotate-180",
-//                 "group-hover:text-[#5f0f4e]",
-//               )}
-//             />
-//           )}
-//         </span>
-//       </motion.p>
-//       {active !== null && (
-//         <motion.div
-//           initial={{ opacity: 0, scale: 0.85, y: 10 }}
-//           animate={{ opacity: 1, scale: 1, y: 0 }}
-//           transition={transition}
-//         >
-//           {active === item && (
-//             <div className="absolute left-1/2 top-[calc(100%_+_1.2rem)] -translate-x-1/2 transform pt-4">
-//               <motion.div
-//                 transition={transition}
-//                 layoutId="active" // layoutId ensures smooth animation
-//                 className="overflow-hidden rounded-2xl border border-black/[0.2] bg-white shadow-xl backdrop-blur-sm"
-//               >
-//                 <motion.div
-//                   layout // layout ensures smooth animation
-//                   className="h-full w-max p-1.5"
-//                 >
-//                   {children}
-//                 </motion.div>
-//               </motion.div>
-//             </div>
-//           )}
-//         </motion.div>
-//       )}
-//     </Link>
-//   );
-// };
 
 export const MenuItem = ({
   setActive,
@@ -92,7 +25,7 @@ export const MenuItem = ({
   className,
   href,
 }: {
-  setActive: (item: string) => void;
+  setActive: (item: string | null) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
@@ -100,14 +33,9 @@ export const MenuItem = ({
   className?: string;
   href?: string;
 }) => {
-  const Wrapper = href && !children ? Link : "div";
 
-  return (
-    <Wrapper
-      {...(href ? { href } : {})}
-      className="relative"
-      onMouseEnter={() => setActive(item)}
-    >
+  const renderContent = () => (
+    <>
       <motion.div
         transition={{ duration: 0.3 }}
         className={cn(
@@ -152,7 +80,17 @@ export const MenuItem = ({
           </motion.div>
         </motion.div>
       )}
-    </Wrapper>
+    </>
+  );
+
+  return href && !children ? (
+    <Link href={href} className="relative" onMouseEnter={() => setActive(item)}>
+      {renderContent()}
+    </Link>
+  ) : (
+    <div className="relative" onMouseEnter={() => setActive(item)}>
+      {renderContent()}
+    </div>
   );
 };
 

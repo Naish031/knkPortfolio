@@ -38,12 +38,11 @@ export default function About() {
           {/* Text Content */}
           <div className="mx-auto mb-12 max-w-2xl text-left md:mb-16 lg:w-1/2">
             <TextGenerateEffect
-              words={`Discover the powerhouse behind innovative engineering, construction, and consultancy solutions. The K&K Group brings together three dynamic companies, each excelling in its specialized domain. Explore our companies below to find the right fit for your needs.`}
+              words="Discover the powerhouse behind innovative engineering, construction, and consultancy solutions. The K&K Group brings together three dynamic companies, each excelling in its specialized domain. Explore our companies below to find the right fit for your needs."
             />
           </div>
 
           {/* Stats - Desktop (Horizontal) */}
-
           <motion.div
             variants={container}
             initial="hidden"
