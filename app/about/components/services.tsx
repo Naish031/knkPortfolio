@@ -36,7 +36,7 @@ export default function Services({
   return (
     <section className="flex flex-col py-12 lg:flex-row lg:justify-between lg:gap-20">
       <div className="mb-8 flex flex-col gap-4 lg:w-1/2">
-        <h2 className="mb-4 text-3xl font-bold text-[#5f0f4e]">{heading}</h2>
+        <h2 className="mb-4 text-3xl font-semibold text-[#5f0f4e]">{heading}</h2>
         <p className="text-gray-600">
           {companies[companySlug]?.services?.description}
         </p>

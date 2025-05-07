@@ -1,6 +1,7 @@
 import Bounded from "@/components/common/bounded";
 import React from "react";
 import { LayoutGrid } from "@/components/ui/layout-grid";
+import Title from "@/components/common/title";
 
 export function LayoutGridDemo() {
   return (
@@ -163,7 +164,7 @@ export default function Gallery() {
     <section>
       <Bounded>
         <section className="flex flex-col items-start justify-center">
-          <h1 className="text-4xl font-bold">Gallery</h1>
+          <Title text="Gallery" />
           <LayoutGridDemo />
         </section>
       </Bounded>
