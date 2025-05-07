@@ -62,7 +62,7 @@ export default function Services({
             <div className="mb-4 flex h-5 w-5 items-center justify-center rounded-full bg-[#5f0f4e] p-4 text-xl text-white">
               {service.icon}
             </div>
-            <h3 className="mb-2 text-xl font-bold">{service.title}</h3>
+            <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
             <p className="text-gray-600">{service.description}</p>
           </motion.div>
         ))}

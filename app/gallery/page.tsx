@@ -16,7 +16,7 @@ export function LayoutGridDemo() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
+      <p className="text-xl font-semibold text-white md:text-4xl">
         House in the woods
       </p>
       <p className="text-base font-normal text-white"></p>
@@ -31,7 +31,7 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
+      <p className="text-xl font-semibold text-white md:text-4xl">
         House above the clouds
       </p>
       <p className="text-base font-normal text-white"></p>
@@ -46,7 +46,7 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
+      <p className="text-xl font-semibold text-white md:text-4xl">
         Greens all over
       </p>
       <p className="text-base font-normal text-white"></p>
@@ -60,7 +60,7 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="text-xl font-bold text-white md:text-4xl">
+      <p className="text-xl font-semibold text-white md:text-4xl">
         Rivers are serene
       </p>
       <p className="text-base font-normal text-white"></p>

@@ -35,7 +35,7 @@ const Hero = () => {
         </motion.div>
       </ImagesSlider>
       <div className="m-2.5 block rounded-lg bg-[#5f0f4e] px-4 py-2.5 text-white shadow-lg backdrop-blur-sm md:m-4 md:hidden md:px-6 md:py-4 xl:px-10">
-        <motion.p className="py-4 text-left text-2xl font-bold md:text-4xl">
+        <motion.p className="py-4 text-left text-2xl font-semibold md:text-4xl">
           Where expertise{" "}
           <span className="block sm:inline"> meets excellence</span>
         </motion.p>
