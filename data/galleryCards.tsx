@@ -53,6 +53,48 @@ export const cardContent = [
     description:
       "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
   },
+  // 9-12
+  {
+    title: "House in the mountains",
+    description:
+      "A house in the mountains is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the desert",
+    description:
+      "A house in the desert is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the city",
+    description:
+      "A house in the city is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the forest",
+    description:
+      "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  // 13-16
+  {
+    title: "House in the mountains",
+    description:
+      "A house in the mountains is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the desert",
+    description:
+      "A house in the desert is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the city",
+    description:
+      "A house in the city is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
+  {
+    title: "House in the forest",
+    description:
+      "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+  },
 ];
 
 export const getCard = (index: number) => {
@@ -94,28 +136,28 @@ export const cards = [
 export const cardsTwo = [
   {
     id: 1,
-    content: getCard(0),
+    content: getCard(4),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/fwIkrrnZgrtdcUhpgSGjACc1s.png",
   },
   {
     id: 2,
-    content: getCard(1),
+    content: getCard(5),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/cW2lRwuRJei1nhMacw7WmPqi8Q8.png",
   },
   {
     id: 3,
-    content: getCard(2),
+    content: getCard(6),
     className: "col-span-1",
     thumbnail:
-      "https://framerusercontent.com/images/EOwemIGfB2V7vWuqPVfhwJpBQ8.png",
+      "https://framerusercontent.com/images/MymmaAnL3JP1wqw2pPB13FMHw.png",
   },
   {
     id: 4,
-    content: getCard(3),
+    content: getCard(7),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/zj1YscUi8nWzlSDuhE1TEAvGGSI.png",

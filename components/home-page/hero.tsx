@@ -5,7 +5,6 @@ import { ImagesSlider } from "../ui/images-slider";
 import Bounded from "../common/bounded";
 
 const Hero = () => {
-
   const images = [
     "/assets/images/homepage/heroOne.png",
     "/assets/images/homepage/heroTwo.png",
@@ -13,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <Bounded className="relative" yPadding="lg">
+    <Bounded yPadding="lg" className="relative pb-0">
       <ImagesSlider className="h-[40rem] rounded-lg" images={images}>
         <motion.div
           initial={{
@@ -36,7 +35,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </ImagesSlider>
-      <div className="m-2.5 block rounded-lg bg-[#5f0f4e] px-4 py-2.5 text-white shadow-lg backdrop-blur-sm md:m-4 md:hidden md:px-6 md:py-4 xl:px-10">
+      <div className="my-2.5 block rounded-lg bg-[#5f0f4e] px-4 py-2.5 text-white shadow-lg backdrop-blur-sm md:m-4 md:hidden md:px-6 md:py-4 xl:px-10">
         <motion.p className="py-4 text-left text-2xl font-semibold md:text-4xl">
           Where expertise{" "}
           <span className="block sm:inline"> meets excellence</span>

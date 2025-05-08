@@ -24,7 +24,7 @@ export default function RootLayout({
     >
       <body className={urbanist.className}>
         <Navbar />
-        <div className="pt-16">{children}</div>
+        <div className="pt-[70px]">{children}</div>
         <Footer />
       </body>
     </html>

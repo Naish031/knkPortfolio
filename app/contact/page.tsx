@@ -1,4 +1,5 @@
 import Bounded from "@/components/common/bounded";
+import ImageWithSkeleton from "@/components/common/image-skeleton";
 import SignupFormDemo from "@/components/sign-up";
 import Image from "next/image";
 import React from "react";
@@ -23,16 +24,16 @@ export default function Contact() {
           <SignupFormDemo />
         </div>
         <div className="order-1 flex w-full flex-1 md:order-2 md:w-1/2">
-          <div className="relative aspect-[16/9] w-full max-w-[860px] overflow-hidden">
-            <Image
+          <div className="relative aspect-[16/9] w-full max-w-[860px] overflow-hidden rounded-xl">
+            <ImageWithSkeleton
               src={
                 "https://framerusercontent.com/images/xrDHqtmWXUz4VpjAo4p1lHqA4.jpg"
               }
               alt="Contact Us"
-              fill
-              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
+              className="transition-transform duration-500 ease-in-out hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
+              fill
             />
           </div>
         </div>

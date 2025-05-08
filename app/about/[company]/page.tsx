@@ -5,6 +5,7 @@ import { companies, CompanySlug } from "@/data/companies";
 import { ArrowBigDown } from "lucide-react";
 import Image from "next/image";
 import Services from "../components/services";
+import ImageWithSkeleton from "@/components/common/image-skeleton";
 
 export async function generateStaticParams() {
   return Object.keys(companies).map((slug) => ({
@@ -66,13 +67,13 @@ export default function CompanyPage({
           </div>
 
           <div className="relative flex w-full flex-1 overflow-hidden md:order-2">
-            <div className="relative aspect-[16/9] w-full max-w-[860px] overflow-hidden md:aspect-[1/1]">
-              <Image
+            <div className="relative aspect-[16/9] w-full max-w-[860px] overflow-hidden rounded-xl md:aspect-[1/1]">
+              <ImageWithSkeleton
                 src={company.image}
                 alt={company.title}
                 width={1200}
                 height={800}
-                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 ease-in-out hover:scale-105"
+                className="transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
           </div>

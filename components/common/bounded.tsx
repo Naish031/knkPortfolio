@@ -1,14 +1,18 @@
 import { cn } from "@/lib/utils";
 
+type BoundedProps = {
+  children: React.ReactNode;
+  className?: string;
+  yPadding?: "sm" | "base" | "lg" | "none";
+  as?: React.ElementType;
+};
+
 export default function Bounded({
   children,
   className,
   yPadding = "base",
-}: {
-  children: React.ReactNode;
-  className?: string;
-  yPadding?: "sm" | "base" | "lg" | "none";
-}) {
+  as: Component = "section",
+}: BoundedProps) {
   const yPaddingClasses =
     yPadding === "none"
       ? ""
@@ -19,14 +23,8 @@ export default function Bounded({
       : "py-5";
 
   return (
-    <div
-      className={cn(
-        "mx-auto max-w-screen-xxxl px-5",
-        yPaddingClasses,
-        className,
-      )}
-    >
+    <Component className={cn("mx-auto max-w-screen-xxxl px-5", yPaddingClasses, className)}>
       {children}
-    </div>
+    </Component>
   );
 }
