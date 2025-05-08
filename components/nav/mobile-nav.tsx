@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   Sheet,
@@ -48,84 +47,114 @@ export default function MobileNavDemo() {
         </SheetHeader>
         <div className="grid gap-4 py-4">
           <div className="border-b border-gray-400 py-2.5">
-            <Label className="text-left">Home</Label>
+            <SheetClose asChild>
+              <Link href="/" className="text-left">
+                <Label className="text-left">Home</Label>
+              </Link>
+            </SheetClose>
           </div>
           <div className="grid gap-4 border-b border-gray-400 py-2.5">
             <Label className="text-left">About</Label>
             <div className="grid grid-cols-1 gap-2.5 py-1.5 pl-2 text-sm">
-              <Link href="/about/kktek" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/knkLogo.png"
-                  width={30}
-                  height={30}
-                  alt="kktek"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>K&K Tek</span>
-              </Link>
-              <Link href="/about/kza" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/kzLogo.png"
-                  width={30}
-                  height={30}
-                  alt="kza"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>KZA</span>
-              </Link>
-              <Link href="/about/kktameer" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/TAMEER.png"
-                  width={30}
-                  height={30}
-                  alt="kktameer"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>K&K Tameer</span>
-              </Link>
+              <SheetClose asChild>
+                <Link href="/about/kktek" className="flex items-center gap-2">
+                  <Image
+                    src="/assets/logos/knkLogo.png"
+                    width={30}
+                    height={30}
+                    alt="kktek"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>K&K Tek</Label>
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link href="/about/kza" className="flex items-center gap-2">
+                  <Image
+                    src="/assets/logos/kzLogo.png"
+                    width={30}
+                    height={30}
+                    alt="kza"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>KZA</Label>
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link
+                  href="/about/kktameer"
+                  className="flex items-center gap-2"
+                >
+                  <Image
+                    src="/assets/logos/TAMEER.png"
+                    width={30}
+                    height={30}
+                    alt="kktameer"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>K&K Tameer</Label>
+                </Link>
+              </SheetClose>
             </div>
           </div>
 
           <div className="grid gap-4 border-b border-gray-400 py-2.5">
             <Label className="text-left">Projects</Label>
             <div className="grid grid-cols-1 gap-2.5 py-1.5 pl-2 text-sm">
-              <Link href="/project/kktek" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/knkLogo.png"
-                  width={30}
-                  height={30}
-                  alt="kktek"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>K&K Tek</span>
-              </Link>
-              <Link href="/project/kza" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/kzLogo.png"
-                  width={30}
-                  height={30}
-                  alt="kza"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>KZA</span>
-              </Link>
-              <Link href="/project/kktameer" className="flex items-center gap-2">
-                <Image
-                  src="/assets/logos/TAMEER.png"
-                  width={30}
-                  height={30}
-                  alt="kktameer"
-                  className="shrink-0 rounded-md shadow-2xl"
-                />
-                <span>K&K Tameer</span>
-              </Link>
+              <SheetClose asChild>
+                <Link href="/project/kktek" className="flex items-center gap-2">
+                  <Image
+                    src="/assets/logos/knkLogo.png"
+                    width={30}
+                    height={30}
+                    alt="kktek"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>K&K Tek</Label>
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link href="/project/kza" className="flex items-center gap-2">
+                  <Image
+                    src="/assets/logos/kzLogo.png"
+                    width={30}
+                    height={30}
+                    alt="kza"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>KZA</Label>
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link
+                  href="/project/kktameer"
+                  className="flex items-center gap-2"
+                >
+                  <Image
+                    src="/assets/logos/TAMEER.png"
+                    width={30}
+                    height={30}
+                    alt="kktameer"
+                    className="shrink-0 rounded-md shadow-2xl"
+                  />
+                  <Label>K&K Tameer</Label>
+                </Link>
+              </SheetClose>
             </div>
           </div>
           <div className="border-b border-gray-400 py-2.5">
-            <Label className="text-left">Gallery</Label>
+            <SheetClose asChild>
+              <Link href="/gallery">
+                <Label className="text-left">Gallery</Label>
+              </Link>
+            </SheetClose>
           </div>
           <div className="border-b border-gray-400 py-2.5">
-            <Label className="text-left">Contact</Label>
+            <SheetClose asChild>
+              <Link href="/contact">
+                <Label className="text-left">Contact</Label>
+              </Link>
+            </SheetClose>
           </div>
         </div>
         <SheetFooter>
