@@ -27,7 +27,7 @@ export const projects = {
         src: "https://framerusercontent.com/images/g035WAXyhrgj4ZIWA0o1l6TWWE.png",
       },
       {
-        title: "Serana Sost",
+        title: "Serena Sost",
         location: "Sost, Pakistan",
         projectType: "Commercial Design",
         src: "https://framerusercontent.com/images/XOW3AyPJCHVw4Az57TGmuDvDIlk.png",

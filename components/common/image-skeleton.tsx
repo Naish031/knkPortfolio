@@ -18,6 +18,7 @@ export default function ImageWithSkeleton({ className, ...props }: ImageProps) {
 
       <Image
         {...props}
+        alt=""
         onLoad={() => setLoaded(true)}
         className={cn(
           "absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700",

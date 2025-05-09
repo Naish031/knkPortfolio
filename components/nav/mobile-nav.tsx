@@ -64,6 +64,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kktek"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>K&K Tek</Label>
                 </Link>
@@ -76,6 +77,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kza"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>KZA</Label>
                 </Link>
@@ -91,6 +93,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kktameer"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>K&K Tameer</Label>
                 </Link>
@@ -109,6 +112,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kktek"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>K&K Tek</Label>
                 </Link>
@@ -121,6 +125,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kza"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>KZA</Label>
                 </Link>
@@ -136,6 +141,7 @@ export default function MobileNav() {
                     height={30}
                     alt="kktameer"
                     className="shrink-0 rounded-md shadow-2xl"
+                    priority
                   />
                   <Label>K&K Tameer</Label>
                 </Link>

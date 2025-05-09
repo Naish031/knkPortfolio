@@ -15,7 +15,6 @@ const transition = {
   restSpeed: 0.001,
 };
 
-
 export const MenuItem = ({
   setActive,
   active,
@@ -33,7 +32,6 @@ export const MenuItem = ({
   className?: string;
   href?: string;
 }) => {
-
   const renderContent = () => (
     <>
       <motion.div
@@ -128,6 +126,7 @@ export const ProductItem = ({
         height={30}
         alt={title}
         className="shrink-0 rounded-md shadow-2xl"
+        priority
       />
       <div>
         <h4 className="mb-1 text-sm font-medium text-black">{title}</h4>
