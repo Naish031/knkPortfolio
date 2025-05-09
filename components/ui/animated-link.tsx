@@ -36,7 +36,7 @@ const AnimatedLink = React.forwardRef<HTMLAnchorElement, AnimatedLinkProps>(
           background: useMotionTemplate`
             radial-gradient(
               ${visible ? `${radius}px` : "0px"} circle at ${mouseX}px ${mouseY}px,
-              #3b82f6,
+              #5f0f4e,
               transparent 80%
             )
           `,
@@ -50,9 +50,9 @@ const AnimatedLink = React.forwardRef<HTMLAnchorElement, AnimatedLinkProps>(
         )}
         {...props}
       >
-        <div className="flex h-10 w-full items-center rounded-md bg-[#F5F5F5] px-3 py-2 text-sm text-black">
+        <span className="flex h-10 w-full items-center rounded-md bg-[#fff7ff] px-3 py-2 text-sm font-semibold text-[#5f0f4e]">
           {children}
-        </div>
+        </span>
       </motion.a>
     );
   },

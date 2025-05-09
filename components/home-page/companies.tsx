@@ -59,7 +59,7 @@ export default function Companies() {
       boxControls.start("visible");
       imageControls.start("visible");
     }
-  }, [isInView, selectedCompany, isChanging]);
+  }, [isInView, selectedCompany, isChanging, titleControls, boxControls, imageControls]);
 
   const handleCompanyChange = (id: string) => {
     setIsChanging(true);
