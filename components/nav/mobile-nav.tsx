@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MobileNavDemo() {
+export default function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger asChild>

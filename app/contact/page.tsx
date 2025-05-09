@@ -1,8 +1,6 @@
 import Bounded from "@/components/common/bounded";
 import ImageWithSkeleton from "@/components/common/image-skeleton";
-import SignupFormDemo from "@/components/sign-up";
-import Image from "next/image";
-import React from "react";
+import ContactSection from "./component/contact";
 
 export default function Contact() {
   return (
@@ -21,7 +19,7 @@ export default function Contact() {
             <li>info@kktameer.com</li>
           </ul>
 
-          <SignupFormDemo />
+          <ContactSection />
         </div>
         <div className="order-1 flex w-full flex-1 md:order-2 md:w-1/2">
           <div className="relative aspect-[16/9] w-full max-w-[860px] overflow-hidden rounded-xl">
