@@ -16,7 +16,7 @@ export default function Gallery() {
       {allSections.map((section, idx) => (
         <section
           key={section.id}
-          className={`mt-${idx === 0 ? "0" : "12"} flex h-screen w-full flex-col items-start justify-center overflow-scroll overflow-y-auto py-6`}
+          className={`mt-${idx === 0 ? "0" : "12"} flex w-full flex-col items-start justify-center py-6`}
         >
           <h1 className="mb-4 text-2xl uppercase text-black">
             {section.title}

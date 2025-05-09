@@ -25,7 +25,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="relative mx-auto grid h-full w-full max-w-screen-xxxl grid-cols-1 gap-4 p-1 lg:grid-cols-3">
+    <div className="relative mx-auto grid h-full w-full max-w-screen-xxxl grid-cols-1 gap-4 p-2 md:grid-cols-3">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -34,7 +34,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden",
               selected?.id === card.id
-                ? "absolute inset-0 z-50 m-auto flex h-1/4 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:w-1/2"
+                ? "absolute inset-0 z-50 m-auto flex h-1/4 w-full cursor-pointer flex-col flex-wrap items-center justify-center rounded-lg md:h-1/2 md:w-1/2 xl:h-2/3"
                 : lastSelected?.id === card.id
                   ? "z-40 h-full w-full rounded-xl bg-white"
                   : "h-full w-full rounded-xl bg-white",
@@ -61,16 +61,19 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
-      )}
-      alt="thumbnail"
-    />
+    <div className="aspect-video w-full overflow-hidden">
+      <motion.img
+        layoutId={`image-${card.id}-image`}
+        src={card.thumbnail}
+        height="500"
+        width="500"
+        sizes="100vw"
+        className={cn(
+          "absolute inset-0 h-full w-full object-cover object-top transition duration-200",
+        )}
+        alt="thumbnail"
+      />
+    </div>
   );
 };
 
@@ -104,7 +107,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative z-[70] px-8 pb-4"
+        className="relative z-[70] px-4 pb-2"
       >
         {selected?.content}
       </motion.div>

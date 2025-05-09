@@ -4,9 +4,11 @@ type SkeletonCardProps = {
 };
 
 export const SkeletonCard = ({ title, description }: SkeletonCardProps) => (
-  <div>
-    <p className="text-xl font-semibold text-white md:text-2xl">{title}</p>
-    <p className="my-4 max-w-lg text-sm font-normal text-neutral-200 md:text-base">
+  <div className="flex h-full w-full flex-col items-start justify-center gap-2">
+    <p className="text-base font-semibold text-white sm:text-lg md:text-2xl">
+      {title}
+    </p>
+    <p className="max-w-lg text-xs text-neutral-200 sm:text-sm md:text-lg">
       {description}
     </p>
   </div>
@@ -34,66 +36,75 @@ export const cardContent = [
       "A panoramic aerial view of Multan Cricket Stadium, reflecting urban integration and capacity.",
   },
   {
-    title: "House in the mountains",
+    title: "Serena Hotel in Peshawar",
     description:
-      "A house in the mountains is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+      "A luxurious hotel set in the heart of Peshawar, offering premium hospitality and comfort.",
   },
   {
-    title: "House in the desert",
+    title: "Piping Equipment at Serena Hotel Peshawar",
     description:
-      "A house in the desert is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+      "High-quality piping equipment installed within the walls, ensuring operational efficiency and a refined aesthetic in a luxury hotel setting at Serena Hotel in Peshawar.",
   },
   {
-    title: "House in the city",
+    title: "Piping Equipment at Serena Hotel Peshawar",
     description:
-      "A house in the city is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+      "High-quality piping equipment installed within the walls, ensuring operational efficiency and a refined aesthetic in a luxury hotel setting at Serena Hotel in Peshawar.",
   },
   {
-    title: "House in the forest",
-    description:
-      "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   // 9-12
   {
-    title: "House in the mountains",
+    title: "Serena Hotel in Hunza",
     description:
-      "A house in the mountains is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+      "A luxurious hotel set in the midst of Hunza's breathtaking scenery, offering premium hospitality and comfort.",
   },
   {
-    title: "House in the desert",
-    description:
-      "A house in the desert is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   {
-    title: "House in the city",
-    description:
-      "A house in the city is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   {
-    title: "House in the forest",
-    description:
-      "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   // 13-16
   {
-    title: "House in the mountains",
-    description:
-      "A house in the mountains is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   {
-    title: "House in the desert",
-    description:
-      "A house in the desert is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   {
-    title: "House in the city",
-    description:
-      "A house in the city is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
   },
   {
-    title: "House in the forest",
-    description:
-      "A house in the forest is a place of peace and tranquility. It's the perfect place to relax, unwind, and enjoy life.",
+    title: "",
+    description: "",
+  },
+  // 17-20
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
   },
 ];
 
@@ -167,56 +178,56 @@ export const cardsTwo = [
 export const cardsThree = [
   {
     id: 1,
-    content: getCard(0),
+    content: getCard(8),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/UaAE8ooteaaJqL1jsCvt14FQ.png",
   },
   {
     id: 2,
-    content: getCard(1),
+    content: getCard(9),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/GwXAYYlMViFn7WwchNtmTUn4zPI.png",
   },
   {
     id: 3,
-    content: getCard(2),
+    content: getCard(10),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/LsqSpXZScyyy9B457vXh9sOqIo.png",
   },
   {
     id: 4,
-    content: getCard(3),
+    content: getCard(11),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/gQcj10b6NlxVrwWkhkRZnrXg0g.png",
   },
   {
     id: 5,
-    content: getCard(4),
+    content: getCard(12),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/WUz341ah07Uc0ZETn1Au8CyPZY.png",
   },
   {
     id: 6,
-    content: getCard(5),
+    content: getCard(13),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/rmNulOJheGAWuAkptn0Pyl18MwM.png",
   },
   {
     id: 7,
-    content: getCard(6),
+    content: getCard(14),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/whkewh2Oytk3OFn3jOSuVJSCPrU.png",
   },
   {
     id: 8,
-    content: getCard(7),
+    content: getCard(15),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/TCBTHSlAERe1qBfpmgO8E3aQgqI.png",
@@ -226,28 +237,28 @@ export const cardsThree = [
 export const cardsFour = [
   {
     id: 1,
-    content: getCard(0),
+    content: getCard(16),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/BTuqf8lX0xCEuel4G8wvs2t0Mc.png",
   },
   {
     id: 2,
-    content: getCard(1),
+    content: getCard(17),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/ucEwMpdtQ6sYbJqAhYrODC0XBgs.png",
   },
   {
     id: 3,
-    content: getCard(2),
+    content: getCard(18),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/3RG7N2zCVVVhoXyLbpYWkVwlU2o.png",
   },
   {
     id: 4,
-    content: getCard(3),
+    content: getCard(19),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/3RG7N2zCVVVhoXyLbpYWkVwlU2o.png",
