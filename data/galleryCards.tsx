@@ -175,12 +175,12 @@ export const cards = [
     className: "md:col-span-2",
     thumbnail: "/assets/images/gallery/pakistanCadetOne.jpg",
   },
-  // {
-  //   id: 6,
-  //   content: getCard(5),
-  //   className: "md:col-span-2",
-  //   thumbnail: "/assets/images/gallery/SerenaHunza.jpg",
-  // },
+  {
+    id: 6,
+    content: getCard(5),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SerenaHunza.jpg",
+  },
 ];
 
 // Serena Peshawar
@@ -213,12 +213,12 @@ export const cardsTwo = [
     thumbnail:
       "https://framerusercontent.com/images/zj1YscUi8nWzlSDuhE1TEAvGGSI.png",
   },
-  {
-    id: 4,
-    content: getCard(8),
-    className: "md:col-span-2",
-    thumbnail: "/assets/images/gallery/SerenaPeshawar.jpg",
-  },
+  // {
+  //   id: 5,
+  //   content: getCard(8),
+  //   className: "md:col-span-2",
+  //   thumbnail: "/assets/images/gallery/SerenaPeshawar.jpg",
+  // },
 ];
 
 // Serena Hunza
