@@ -11,7 +11,7 @@ export default function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 z-50 mx-auto w-full shadow-input",
+        "fixed inset-x-0 z-[9999] mx-auto w-full shadow-input",
         className,
       )}
     >
@@ -101,3 +101,4 @@ export default function Navbar({ className }: { className?: string }) {
     </div>
   );
 }
+

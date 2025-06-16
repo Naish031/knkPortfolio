@@ -33,7 +33,7 @@ export const MenuItem = ({
   href?: string;
 }) => {
   const renderContent = () => (
-    <>
+    <div className="relative">
       <motion.div
         transition={{ duration: 0.3 }}
         className={cn(
@@ -65,7 +65,9 @@ export const MenuItem = ({
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
-          className="absolute top-[calc(100%_+_1.2rem)] pt-4"
+          className="absolute left-0 top-[calc(100%_+_1.2rem)] pt-2"
+          onMouseEnter={() => setActive(item)}
+          // onMouseLeave={() => setActive(null)}
         >
           <motion.div
             transition={transition}
@@ -78,10 +80,10 @@ export const MenuItem = ({
           </motion.div>
         </motion.div>
       )}
-    </>
+    </div>
   );
 
-  return href && !children ? (
+  return href ? (
     <Link href={href} className="relative" onMouseEnter={() => setActive(item)}>
       {renderContent()}
     </Link>
@@ -101,7 +103,7 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
+      onMouseLeave={() => setActive(null)}
       className="relative flex items-center justify-between space-x-4 bg-white py-4"
     >
       {children}

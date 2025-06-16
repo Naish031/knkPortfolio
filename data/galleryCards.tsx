@@ -35,6 +35,7 @@ export const cardContent = [
     description:
       "A panoramic aerial view of Multan Cricket Stadium, reflecting urban integration and capacity.",
   },
+  // 2 more images
   {
     title: "Serena Hotel in Peshawar",
     description:
@@ -106,6 +107,31 @@ export const cardContent = [
     title: "",
     description: "",
   },
+  // 21-26
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
+  {
+    title: "",
+    description: "",
+  },
 ];
 
 export const getCard = (index: number) => {
@@ -113,6 +139,7 @@ export const getCard = (index: number) => {
   return <SkeletonCard title={title} description={description} />;
 };
 
+// Main Gallery
 export const cards = [
   {
     id: 1,
@@ -142,8 +169,21 @@ export const cards = [
     thumbnail:
       "https://framerusercontent.com/images/BkytBP8atXMHI0NeRH2TrJtxemI.png",
   },
+  {
+    id: 5,
+    content: getCard(4),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/pakistanCadetOne.jpg",
+  },
+  // {
+  //   id: 6,
+  //   content: getCard(5),
+  //   className: "md:col-span-2",
+  //   thumbnail: "/assets/images/gallery/SerenaHunza.jpg",
+  // },
 ];
 
+// Serena Peshawar
 export const cardsTwo = [
   {
     id: 1,
@@ -173,94 +213,154 @@ export const cardsTwo = [
     thumbnail:
       "https://framerusercontent.com/images/zj1YscUi8nWzlSDuhE1TEAvGGSI.png",
   },
+  {
+    id: 4,
+    content: getCard(8),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SerenaPeshawar.jpg",
+  },
 ];
 
+// Serena Hunza
 export const cardsThree = [
   {
     id: 1,
-    content: getCard(8),
+    content: getCard(9),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/UaAE8ooteaaJqL1jsCvt14FQ.png",
   },
   {
     id: 2,
-    content: getCard(9),
+    content: getCard(10),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/GwXAYYlMViFn7WwchNtmTUn4zPI.png",
   },
   {
     id: 3,
-    content: getCard(10),
+    content: getCard(11),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/LsqSpXZScyyy9B457vXh9sOqIo.png",
   },
   {
     id: 4,
-    content: getCard(11),
+    content: getCard(12),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/gQcj10b6NlxVrwWkhkRZnrXg0g.png",
   },
   {
     id: 5,
-    content: getCard(12),
+    content: getCard(13),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/WUz341ah07Uc0ZETn1Au8CyPZY.png",
   },
   {
     id: 6,
-    content: getCard(13),
+    content: getCard(14),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/rmNulOJheGAWuAkptn0Pyl18MwM.png",
   },
   {
     id: 7,
-    content: getCard(14),
+    content: getCard(15),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/whkewh2Oytk3OFn3jOSuVJSCPrU.png",
   },
   {
     id: 8,
-    content: getCard(15),
+    content: getCard(16),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/TCBTHSlAERe1qBfpmgO8E3aQgqI.png",
   },
 ];
 
+// Pakistan Cadet College
 export const cardsFour = [
   {
     id: 1,
-    content: getCard(16),
+    content: getCard(17),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/BTuqf8lX0xCEuel4G8wvs2t0Mc.png",
   },
   {
     id: 2,
-    content: getCard(17),
+    content: getCard(18),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/ucEwMpdtQ6sYbJqAhYrODC0XBgs.png",
   },
   {
     id: 3,
-    content: getCard(18),
+    content: getCard(19),
     className: "col-span-1",
     thumbnail:
       "https://framerusercontent.com/images/3RG7N2zCVVVhoXyLbpYWkVwlU2o.png",
   },
   {
     id: 4,
-    content: getCard(19),
+    content: getCard(20),
     className: "md:col-span-2",
     thumbnail:
       "https://framerusercontent.com/images/3RG7N2zCVVVhoXyLbpYWkVwlU2o.png",
+  },
+  {
+    id: 5,
+    content: getCard(21),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/pakistanCadetOne.jpg",
+  },
+  {
+    id: 6,
+    content: getCard(22),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/PakistanCadetTwo.jpg",
+  },
+];
+
+// Sukh Chayn
+export const cardsFive = [
+  {
+    id: 1,
+    content: getCard(23),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynOne.jpg",
+  },
+  {
+    id: 2,
+    content: getCard(24),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynTwo.jpg",
+  },
+  {
+    id: 3,
+    content: getCard(25),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynThree.jpg",
+  },
+  {
+    id: 4,
+    content: getCard(26),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynFour.jpg",
+  },
+  {
+    id: 5,
+    content: getCard(27),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynFive.jpg",
+  },
+  {
+    id: 6,
+    content: getCard(28),
+    className: "md:col-span-2",
+    thumbnail: "/assets/images/gallery/SukhChaynSix.jpg",
   },
 ];
