@@ -279,7 +279,6 @@ export const galleryData = {
       id: 6,
       title: "",
       description: "",
-
       thumbnail: "/assets/images/gallery/PakistanCadetThree.jpg",
       className: "md:col-span-2",
     },
