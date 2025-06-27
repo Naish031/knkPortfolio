@@ -265,7 +265,7 @@ export const galleryData = {
       id: 4,
       title: "",
       description: "",
-      thumbnail: "/assets/images/gallery/PakistanCadetOne.jpg",
+      thumbnail: "/assets/images/gallery/pakistanCadetOne.jpg",
       className: "md:col-span-2",
     },
     {
